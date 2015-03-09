@@ -57,7 +57,7 @@
     if (![password isEqualToString:passwordcomfirm]) {
         [Func showAlert:@"输入的确认密码同原密码不同，请重新输入"];
     }
-    NSString *url = @"http://www.chensihang.com/iostest/register.php";
+    NSString *url = @"http://www.chensihang.com/CSHiOS/register.php";
     NSString *poststr = [NSString stringWithFormat:@"id=%@&email=%@&password=%@", userid, email,  password];
     NSString *res = [Func webRequestWith:url and:poststr];
     if ([res isEqualToString:@"success"]) {
@@ -75,7 +75,7 @@
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
     NSString *filename = [NSString stringWithFormat:@"%@.jpg", userid];
-    [manager POST:@"http://www.chensihang.com/iostest/upload.php" parameters:@{} constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+    [manager POST:@"http://www.chensihang.com/CSHiOS/upload.php" parameters:@{} constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         [formData appendPartWithFileData:imgdata name:@"file" fileName:filename mimeType:@"image/jpeg"];
     } success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSString *response = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
