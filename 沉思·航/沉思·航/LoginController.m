@@ -46,7 +46,7 @@
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
     manager.requestSerializer = [AFHTTPRequestSerializer serializer];
     manager.responseSerializer = [AFHTTPResponseSerializer serializer];
-    [manager POST:@"http://www.chensihang.com/iostest/pic_val.php" parameters:@{} constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+    [manager POST:@"http://www.chensihang.com/CSHiOS/pic_val.php" parameters:@{} constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         [formData appendPartWithFormData:[user dataUsingEncoding:NSUTF8StringEncoding] name:@"idoremail"];
     } success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSString *response = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
@@ -62,7 +62,7 @@
 }
 
 - (void)getPic:(NSString*)response{
-    NSString *urlstr = [NSString stringWithFormat:@"http://www.chensihang.com/iostest/portraits/%@.jpg", response];
+    NSString *urlstr = [NSString stringWithFormat:@"http://www.chensihang.com/CSHiOS/portraits/%@.jpg", response];
     NSURL *url = [NSURL URLWithString:urlstr];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:req];
@@ -81,7 +81,7 @@
 {
     NSString *user = idoremail.text;
     NSString *password = passwd.text;
-    NSString *url = @"http://www.chensihang.com/iostest/login.php";
+    NSString *url = @"http://www.chensihang.com/CSHiOS/login.php";
     NSString *poststr = [NSString stringWithFormat:@"idoremail=%@&password=%@", user, password];
     NSString *res = [Func webRequestWith:url and:poststr];
     NSLog(@"%@", res);
