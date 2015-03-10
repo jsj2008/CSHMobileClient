@@ -86,51 +86,59 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ic-LW-d2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1130" y="433"/>
-        </scene>
-        <!--Root View Controller-->
-        <scene sceneID="Dgs-Hi-4Pb">
-            <objects>
-                <tableViewController id="WVY-31-0dd" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GNE-9E-N9a">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="aeX-Rx-vii">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aeX-Rx-vii" id="3RQ-VS-S40">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="WVY-31-0dd" id="OrI-3S-A8z"/>
-                            <outlet property="delegate" destination="WVY-31-0dd" id="Igk-d9-9FM"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="DZX-na-SmA"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="S6G-Dh-oyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1187.5" y="271.5"/>
+            <point key="canvasLocation" x="1041.5" y="1114.5"/>
         </scene>
         <!--用户-->
         <scene sceneID="Ihw-UK-EOI">
             <objects>
-                <navigationController id="F5q-E8-3uD" customClass="FourthViewController" sceneMemberID="viewController">
+                <navigationController id="F5q-E8-3uD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="用户" image="first" id="mq6-WB-WAD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dEt-Rw-TqS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="WVY-31-0dd" kind="relationship" relationship="rootViewController" id="7Gd-HA-MfD"/>
+                        <segue destination="hhk-YJ-IVq" kind="relationship" relationship="rootViewController" id="cc6-aP-2ln"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h7V-PA-yMw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="634.5" y="291.5"/>
+        </scene>
+        <!--个人管理-->
+        <scene sceneID="jxL-Pl-abt">
+            <objects>
+                <viewController id="hhk-YJ-IVq" customClass="FourthViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fXA-yw-cQz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="个人管理" id="arH-Ex-5ab">
+                        <barButtonItem key="backBarButtonItem" title="后退" id="oUT-ON-l7V"/>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="YEr-kz-sBO" kind="push" identifier="info" id="nnT-AO-r1g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nlF-nO-sGS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1103.5" y="299.5"/>
+        </scene>
+        <!--Info Details-->
+        <scene sceneID="7a0-Vj-WyD">
+            <objects>
+                <viewController id="YEr-kz-sBO" customClass="InfoDetails" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kVn-gH-X3p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vYA-6m-dac"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r84-NC-TqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1560.5" y="316.5"/>
         </scene>
         <!--教务系统-->
         <scene sceneID="bor-Gp-UiC">
@@ -147,7 +155,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQ7-ow-HTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="629.5" y="853.5"/>
+            <point key="canvasLocation" x="473.5" y="1181.5"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="d7g-IU-xry">
@@ -226,7 +234,6 @@
         <!--Find Back Password-->
         <scene sceneID="Xh8-s3-1Fu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m5W-EG-bvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="dDy-Pu-D0Q" customClass="FindBackPassword" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zff-lK-y9s" customClass="UIControl">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -276,6 +283,7 @@
                         <outlet property="email" destination="9tk-5e-gDs" id="nl6-RZ-7pB"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m5W-EG-bvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1089.5" y="-300.5"/>
         </scene>

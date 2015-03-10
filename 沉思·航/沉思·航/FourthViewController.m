@@ -1,12 +1,7 @@
-//
-//  FourthViewController.m
-//  沉思·航
-//
-//  Created by Sean Chain on 3/10/15.
-//  Copyright (c) 2015 Sean Chain. All rights reserved.
-//
+
 
 #import "FourthViewController.h"
+#import "AppDelegate.h"
 
 @interface FourthViewController ()
 
@@ -14,9 +9,76 @@
 
 @implementation FourthViewController
 
+NSDictionary *dic;
+NSArray *content;
+//将来将使用解析新闻链接的方式获得标题
+
+UIToolbar *toolbar;
+UITableView *table;
+
+NSIndexPath *idxpth;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view, typically from a nib.
+    float x = self.view.frame.size.width;
+    float y = self.view.frame.size.height;
+    [self.view addSubview:toolbar];
+    table = [[UITableView alloc] initWithFrame:CGRectMake(0, y * 0.096, x, y * 0.904) style:UITableViewStylePlain];
+    table.delegate = self;
+    table.dataSource = self;
+    [self.view addSubview:table];
+    content = @[@"用户名", @"用户信息"];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString* cellId = @"cellId";
+    UITableViewCell* cell = [tableView
+                             dequeueReusableCellWithIdentifier:cellId];
+    if(cell == nil)
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+    NSUInteger rowNo = indexPath.row;
+    cell.textLabel.text = [content objectAtIndex:rowNo];
+    cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
+    cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:0.19 green:0.52 blue:0.92 alpha:1];
+    cell.textLabel.highlightedTextColor = [UIColor whiteColor];
+    //将来加入缩略图显示
+    return cell;
+}
+// 该方法的返回值决定指定分区内包含多少个表格行。
+- (NSInteger)tableView:(UITableView*)tableView
+	numberOfRowsInSection:(NSInteger)section
+{
+    // 由于该表格只有一个分区，直接返回books中集合元素个数代表表格的行数
+    return content.count;
+}
+
+- (NSArray *)getNewsURL:(UIBarButtonItem*)sender{
+    NSString *keyword = [sender title];
+    //进行一系列的获取新闻URL的操作并将所得的URL结果以数组的形式过滤
+    NSArray *ary = @[@"http://chensihang/iostest/newsone.html", @"http://chensihang/iostest/newstwo.html"];
+    return ary;
+}
+
+- (BOOL) tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    idxpth = indexPath;
+    UITableViewCell *cell = (UITableViewCell *)[tableView cellForRowAtIndexPath:idxpth];
+    if (cell.tag == 0) {
+        cell.selected = NO;
+    }else{
+        [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
+    }
+    [self performSegueWithIdentifier:@"info" sender:self.view];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +86,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    id destController = segue.destinationViewController;
+    [destController setValue:idxpth forKey:@"indexpath"];
 }
-*/
 
 @end

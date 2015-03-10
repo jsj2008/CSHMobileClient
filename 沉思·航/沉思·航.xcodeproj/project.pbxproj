@@ -40,6 +40,7 @@
 		77B4928A1AAEE3100009E0C0 /* FindBackPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B492891AAEE3100009E0C0 /* FindBackPassword.m */; };
 		77B4928D1AAEEE080009E0C0 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B4928C1AAEEE080009E0C0 /* ThirdViewController.m */; };
 		77B492901AAEEE140009E0C0 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B4928F1AAEEE140009E0C0 /* FourthViewController.m */; };
+		77E1811E1AAF46800059BE82 /* InfoDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E1811D1AAF46800059BE82 /* InfoDetails.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		77B4928C1AAEEE080009E0C0 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		77B4928E1AAEEE140009E0C0 /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
 		77B4928F1AAEEE140009E0C0 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
+		77E1811C1AAF46800059BE82 /* InfoDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoDetails.h; sourceTree = "<group>"; };
+		77E1811D1AAF46800059BE82 /* InfoDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoDetails.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +175,8 @@
 				773BE95F1AACAB3D00930F47 /* SecondViewController.h */,
 				773BE9601AACAB3D00930F47 /* SecondViewController.m */,
 				773BE9621AACAB3D00930F47 /* Main.storyboard */,
+				77E1811C1AAF46800059BE82 /* InfoDetails.h */,
+				77E1811D1AAF46800059BE82 /* InfoDetails.m */,
 				773BE9651AACAB3E00930F47 /* Images.xcassets */,
 				773BE9671AACAB3E00930F47 /* LaunchScreen.xib */,
 				773BE9551AACAB3D00930F47 /* Supporting Files */,
@@ -377,6 +382,7 @@
 				778AD6AB1AAE065C00398C37 /* AFSecurityPolicy.m in Sources */,
 				778AD6A71AAE065C00398C37 /* AFHTTPRequestOperation.m in Sources */,
 				77B4928D1AAEEE080009E0C0 /* ThirdViewController.m in Sources */,
+				77E1811E1AAF46800059BE82 /* InfoDetails.m in Sources */,
 				778AD6AF1AAE065C00398C37 /* AFURLSessionManager.m in Sources */,
 				773BE95E1AACAB3D00930F47 /* FirstViewController.m in Sources */,
 				77B4928A1AAEE3100009E0C0 /* FindBackPassword.m in Sources */,

@@ -1,5 +1,5 @@
 //
-//  FourthViewController.h
+//  InfoDetails.h
 //  沉思·航
 //
 //  Created by Sean Chain on 3/10/15.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FourthViewController : UINavigationController
+@interface InfoDetails : UIViewController
+
+@property (weak, nonatomic) NSIndexPath* indexpath;
 
 @end
