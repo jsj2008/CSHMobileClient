@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface FirstViewController : UIViewController <UIGestureRecognizerDelegate>
+@property (weak, nonatomic) IBOutlet UIWebView *webview;
 
 
 @end

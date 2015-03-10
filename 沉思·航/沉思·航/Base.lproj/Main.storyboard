@@ -12,21 +12,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by FirstViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="A5M-7J-77L">
-                                <rect key="frame" x="90" y="311" width="195" height="17"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <webView contentMode="scaleToFill" id="18o-4c-Dgt">
+                                <rect key="frame" x="0.0" y="20" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="博客" image="first" id="acW-dT-cKf"/>
+                    <connections>
+                        <outlet property="webview" destination="18o-4c-Dgt" id="QZg-Fk-2SA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="671.5" y="-456.5"/>
+            <point key="canvasLocation" x="687.5" y="-541.5"/>
         </scene>
         <!--代码分享-->
         <scene sceneID="wg7-f3-ORb">
@@ -112,13 +113,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S6G-Dh-oyX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="982" y="277"/>
+            <point key="canvasLocation" x="1187.5" y="271.5"/>
         </scene>
         <!--用户-->
         <scene sceneID="Ihw-UK-EOI">
             <objects>
                 <navigationController id="F5q-E8-3uD" customClass="FourthViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="用户" id="mq6-WB-WAD"/>
+                    <tabBarItem key="tabBarItem" title="用户" image="first" id="mq6-WB-WAD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dEt-Rw-TqS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -135,7 +136,7 @@
         <scene sceneID="bor-Gp-UiC">
             <objects>
                 <navigationController id="xju-ER-trU" customClass="ThirdViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="教务系统" id="Yhk-ga-aSX"/>
+                    <tabBarItem key="tabBarItem" title="教务系统" image="second" id="Yhk-ga-aSX"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ig6-1l-XMs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -146,7 +147,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQ7-ow-HTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="634.5" y="556.5"/>
+            <point key="canvasLocation" x="629.5" y="853.5"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="d7g-IU-xry">
@@ -177,6 +178,7 @@
                                 </state>
                                 <connections>
                                     <action selector="loginIssue:" destination="qTS-AG-2uN" eventType="touchUpInside" id="HtN-zT-pnc"/>
+                                    <segue destination="dDy-Pu-D0Q" kind="modal" id="iD6-6S-dzS"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e5B-Xn-8hb">
@@ -214,12 +216,68 @@
                     <connections>
                         <outlet property="idoremail" destination="Qgr-3C-sz5" id="Ros-DB-fuN"/>
                         <outlet property="passwd" destination="uie-zl-0Qc" id="Uqb-Ep-63c"/>
-                        <segue destination="49e-Tb-3d3" kind="modal" identifier="tabbar" id="miB-FK-IY0"/>
+                        <segue destination="49e-Tb-3d3" kind="modal" identifier="tabbar" modalTransitionStyle="crossDissolve" id="miB-FK-IY0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4Z-Sd-AQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-326.5" y="-420.5"/>
+        </scene>
+        <!--Find Back Password-->
+        <scene sceneID="Xh8-s3-1Fu">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m5W-EG-bvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="dDy-Pu-D0Q" customClass="FindBackPassword" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zff-lK-y9s" customClass="UIControl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请输入您注册的邮箱号" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TQc-E1-aWc">
+                                <rect key="frame" x="102" y="131" width="170" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="gao-9G-iM3">
+                                <rect key="frame" x="172" y="247" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="确定">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="click:" destination="dDy-Pu-D0Q" eventType="touchUpInside" id="ibG-Ol-Fnm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kit-Pz-NgY">
+                                <rect key="frame" x="299" y="617" width="60" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="回到登陆">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="qTS-AG-2uN" kind="modal" id="grH-wD-He7"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="9tk-5e-gDs">
+                                <rect key="frame" x="54" y="185" width="266" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <action selector="keyboarddown:" destination="dDy-Pu-D0Q" eventType="valueChanged" id="LrA-RU-3SG"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="email" destination="9tk-5e-gDs" id="nl6-RZ-7pB"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1089.5" y="-300.5"/>
         </scene>
         <!--Register Controller-->
         <scene sceneID="TbD-mK-rN3">
@@ -299,7 +357,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="tabview" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
@@ -329,6 +387,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bAw-IX-cer"/>
+        <segue reference="miB-FK-IY0"/>
+        <segue reference="grH-wD-He7"/>
     </inferredMetricsTieBreakers>
 </document>

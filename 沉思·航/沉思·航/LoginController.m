@@ -30,11 +30,25 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [passwd addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventAllTouchEvents];
-    [self.view addSubview:self.portraitImageView];
-    [self loadPortrait];
-    UIImage *background = [UIImage imageNamed:@"Background.jpg"];
-    self.view.backgroundColor = [UIColor colorWithPatternImage:background];
+    if ([self isValidUser]) {
+        self.view = [[UIView alloc] init];
+    }
+    else{
+        [passwd addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventAllTouchEvents];
+        [self.view addSubview:self.portraitImageView];
+        [self loadPortrait];
+        UIImage *background = [UIImage imageNamed:@"Background.jpg"];
+        self.view.backgroundColor = [UIColor colorWithPatternImage:background];
+    }
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if (self.isValidUser) {
+        [super viewDidAppear:NO];
+        sleep(3);
+        [self performSegueWithIdentifier:@"tabbar" sender:self];
+    }
 }
 
 
@@ -78,6 +92,16 @@
     [operation start];
 }
 
+- (BOOL)isValidUser
+{
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    if ([ud valueForKey:@"user"]) {
+        return YES;
+    }
+    else
+        return NO;
+}
+
 - (IBAction)login:(id)sender
 {
     NSString *user = idoremail.text;
@@ -88,7 +112,10 @@
     NSLog(@"%@", res);
     if ([res isEqualToString:@"success"]) {
         NSLog(@"Login successfully");
-        
+        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+        [userDefaults setObject:user forKey:@"user"];
+        [userDefaults setObject:password forKey:@"password"];
+        //[userDefaults synchronize];
         [self performSegueWithIdentifier:@"tabbar" sender:self];
     }
     else{

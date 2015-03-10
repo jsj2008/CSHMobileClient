@@ -37,6 +37,9 @@
 		778AD6C31AAE072700398C37 /* recommend.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AD6BA1AAE072700398C37 /* recommend.png */; };
 		778AD6C41AAE072700398C37 /* testimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AD6BB1AAE072700398C37 /* testimg.png */; };
 		778AD6C51AAE072700398C37 /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 778AD6BC1AAE072700398C37 /* user.png */; };
+		77B4928A1AAEE3100009E0C0 /* FindBackPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B492891AAEE3100009E0C0 /* FindBackPassword.m */; };
+		77B4928D1AAEEE080009E0C0 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B4928C1AAEEE080009E0C0 /* ThirdViewController.m */; };
+		77B492901AAEEE140009E0C0 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B4928F1AAEEE140009E0C0 /* FourthViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +104,12 @@
 		778AD6BA1AAE072700398C37 /* recommend.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recommend.png; sourceTree = "<group>"; };
 		778AD6BB1AAE072700398C37 /* testimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = testimg.png; sourceTree = "<group>"; };
 		778AD6BC1AAE072700398C37 /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
+		77B492881AAEE3100009E0C0 /* FindBackPassword.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindBackPassword.h; sourceTree = "<group>"; };
+		77B492891AAEE3100009E0C0 /* FindBackPassword.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindBackPassword.m; sourceTree = "<group>"; };
+		77B4928B1AAEEE080009E0C0 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
+		77B4928C1AAEEE080009E0C0 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
+		77B4928E1AAEEE140009E0C0 /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
+		77B4928F1AAEEE140009E0C0 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +155,13 @@
 				778AD6921AAE065C00398C37 /* AFNetworking */,
 				778AD68F1AAE05E200398C37 /* LoginController.h */,
 				778AD6901AAE05E200398C37 /* LoginController.m */,
+				77B4928B1AAEEE080009E0C0 /* ThirdViewController.h */,
+				77B4928C1AAEEE080009E0C0 /* ThirdViewController.m */,
+				77B4928E1AAEEE140009E0C0 /* FourthViewController.h */,
+				77B4928F1AAEEE140009E0C0 /* FourthViewController.m */,
 				778AD68C1AAE05D900398C37 /* RegisterController.h */,
+				77B492881AAEE3100009E0C0 /* FindBackPassword.h */,
+				77B492891AAEE3100009E0C0 /* FindBackPassword.m */,
 				778AD68D1AAE05D900398C37 /* RegisterController.m */,
 				778AD6891AAE05B900398C37 /* Func.h */,
 				778AD68A1AAE05B900398C37 /* Func.m */,
@@ -361,10 +376,13 @@
 				778AD6AD1AAE065C00398C37 /* AFURLRequestSerialization.m in Sources */,
 				778AD6AB1AAE065C00398C37 /* AFSecurityPolicy.m in Sources */,
 				778AD6A71AAE065C00398C37 /* AFHTTPRequestOperation.m in Sources */,
+				77B4928D1AAEEE080009E0C0 /* ThirdViewController.m in Sources */,
 				778AD6AF1AAE065C00398C37 /* AFURLSessionManager.m in Sources */,
 				773BE95E1AACAB3D00930F47 /* FirstViewController.m in Sources */,
+				77B4928A1AAEE3100009E0C0 /* FindBackPassword.m in Sources */,
 				778AD68B1AAE05B900398C37 /* Func.m in Sources */,
 				778AD6A91AAE065C00398C37 /* AFHTTPSessionManager.m in Sources */,
+				77B492901AAEEE140009E0C0 /* FourthViewController.m in Sources */,
 				773BE9581AACAB3D00930F47 /* main.m in Sources */,
 				778AD6AA1AAE065C00398C37 /* AFNetworkReachabilityManager.m in Sources */,
 				778AD6A81AAE065C00398C37 /* AFHTTPRequestOperationManager.m in Sources */,
