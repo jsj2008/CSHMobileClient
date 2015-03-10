@@ -63,6 +63,7 @@
 
 - (void)getPic:(NSString*)response{
     NSString *urlstr = [NSString stringWithFormat:@"http://www.chensihang.com/CSHiOS/portraits/%@.jpg", response];
+    NSLog(@"%@", urlstr);
     NSURL *url = [NSURL URLWithString:urlstr];
     NSURLRequest *req = [NSURLRequest requestWithURL:url];
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:req];
