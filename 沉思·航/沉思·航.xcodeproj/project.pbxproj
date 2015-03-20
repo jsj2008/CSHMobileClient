@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7735797D1ABC442E000153D2 /* ZuSimpelColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7735797C1ABC442E000153D2 /* ZuSimpelColor.m */; };
+		7735797F1ABC49B1000153D2 /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 7735797E1ABC49B1000153D2 /* key.png */; };
+		773579821ABC4BB5000153D2 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 773579801ABC4BB5000153D2 /* lock.png */; };
+		773579831ABC4BB5000153D2 /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 773579811ABC4BB5000153D2 /* mail.png */; };
 		773BE9581AACAB3D00930F47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 773BE9571AACAB3D00930F47 /* main.m */; };
 		773BE95B1AACAB3D00930F47 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 773BE95A1AACAB3D00930F47 /* AppDelegate.m */; };
 		773BE95E1AACAB3D00930F47 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 773BE95D1AACAB3D00930F47 /* FirstViewController.m */; };
@@ -54,6 +58,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7735797B1ABC442E000153D2 /* ZuSimpelColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZuSimpelColor.h; sourceTree = "<group>"; };
+		7735797C1ABC442E000153D2 /* ZuSimpelColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZuSimpelColor.m; sourceTree = "<group>"; };
+		7735797E1ABC49B1000153D2 /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
+		773579801ABC4BB5000153D2 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		773579811ABC4BB5000153D2 /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
 		773BE9521AACAB3D00930F47 /* 沉思·航.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "沉思·航.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		773BE9561AACAB3D00930F47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		773BE9571AACAB3D00930F47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -156,30 +165,11 @@
 			children = (
 				778AD6B01AAE066900398C37 /* VPImageCropper */,
 				778AD6921AAE065C00398C37 /* AFNetworking */,
-				778AD68F1AAE05E200398C37 /* LoginController.h */,
-				778AD6901AAE05E200398C37 /* LoginController.m */,
-				77B4928B1AAEEE080009E0C0 /* ThirdViewController.h */,
-				77B4928C1AAEEE080009E0C0 /* ThirdViewController.m */,
-				77B4928E1AAEEE140009E0C0 /* FourthViewController.h */,
-				77B4928F1AAEEE140009E0C0 /* FourthViewController.m */,
-				778AD68C1AAE05D900398C37 /* RegisterController.h */,
-				77B492881AAEE3100009E0C0 /* FindBackPassword.h */,
-				77B492891AAEE3100009E0C0 /* FindBackPassword.m */,
-				778AD68D1AAE05D900398C37 /* RegisterController.m */,
-				778AD6891AAE05B900398C37 /* Func.h */,
-				778AD68A1AAE05B900398C37 /* Func.m */,
-				773BE9591AACAB3D00930F47 /* AppDelegate.h */,
-				773BE95A1AACAB3D00930F47 /* AppDelegate.m */,
-				773BE95C1AACAB3D00930F47 /* FirstViewController.h */,
-				773BE95D1AACAB3D00930F47 /* FirstViewController.m */,
-				773BE95F1AACAB3D00930F47 /* SecondViewController.h */,
-				773BE9601AACAB3D00930F47 /* SecondViewController.m */,
-				773BE9621AACAB3D00930F47 /* Main.storyboard */,
-				77E1811C1AAF46800059BE82 /* InfoDetails.h */,
-				77E1811D1AAF46800059BE82 /* InfoDetails.m */,
-				773BE9651AACAB3E00930F47 /* Images.xcassets */,
-				773BE9671AACAB3E00930F47 /* LaunchScreen.xib */,
-				773BE9551AACAB3D00930F47 /* Supporting Files */,
+				779EB3381AB8000F00E3CC16 /* UserManage */,
+				779EB3391AB8002700E3CC16 /* TabbarViewControllers */,
+				779EB33A1AB8004600E3CC16 /* Assets */,
+				779EB33B1AB8006500E3CC16 /* Delegate */,
+				779EB33C1AB8007C00E3CC16 /* Supports */,
 			);
 			path = "沉思·航";
 			sourceTree = "<group>";
@@ -187,6 +177,9 @@
 		773BE9551AACAB3D00930F47 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				773579801ABC4BB5000153D2 /* lock.png */,
+				773579811ABC4BB5000153D2 /* mail.png */,
+				7735797E1ABC49B1000153D2 /* key.png */,
 				778AD6B41AAE072700398C37 /* Background.jpg */,
 				778AD6B51AAE072700398C37 /* check.png */,
 				778AD6B61AAE072700398C37 /* icon.png */,
@@ -260,6 +253,67 @@
 				778AD6B21AAE066900398C37 /* VPImageCropperViewController.m */,
 			);
 			path = VPImageCropper;
+			sourceTree = "<group>";
+		};
+		779EB3381AB8000F00E3CC16 /* UserManage */ = {
+			isa = PBXGroup;
+			children = (
+				7735797B1ABC442E000153D2 /* ZuSimpelColor.h */,
+				7735797C1ABC442E000153D2 /* ZuSimpelColor.m */,
+				77E1811C1AAF46800059BE82 /* InfoDetails.h */,
+				77E1811D1AAF46800059BE82 /* InfoDetails.m */,
+				778AD68F1AAE05E200398C37 /* LoginController.h */,
+				778AD6901AAE05E200398C37 /* LoginController.m */,
+				778AD68C1AAE05D900398C37 /* RegisterController.h */,
+				77B492881AAEE3100009E0C0 /* FindBackPassword.h */,
+				77B492891AAEE3100009E0C0 /* FindBackPassword.m */,
+				778AD68D1AAE05D900398C37 /* RegisterController.m */,
+			);
+			name = UserManage;
+			sourceTree = "<group>";
+		};
+		779EB3391AB8002700E3CC16 /* TabbarViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				77B4928B1AAEEE080009E0C0 /* ThirdViewController.h */,
+				77B4928C1AAEEE080009E0C0 /* ThirdViewController.m */,
+				77B4928E1AAEEE140009E0C0 /* FourthViewController.h */,
+				77B4928F1AAEEE140009E0C0 /* FourthViewController.m */,
+				773BE95C1AACAB3D00930F47 /* FirstViewController.h */,
+				773BE95D1AACAB3D00930F47 /* FirstViewController.m */,
+				773BE95F1AACAB3D00930F47 /* SecondViewController.h */,
+				773BE9601AACAB3D00930F47 /* SecondViewController.m */,
+			);
+			name = TabbarViewControllers;
+			sourceTree = "<group>";
+		};
+		779EB33A1AB8004600E3CC16 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				778AD6891AAE05B900398C37 /* Func.h */,
+				778AD68A1AAE05B900398C37 /* Func.m */,
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		779EB33B1AB8006500E3CC16 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				773BE9591AACAB3D00930F47 /* AppDelegate.h */,
+				773BE95A1AACAB3D00930F47 /* AppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		779EB33C1AB8007C00E3CC16 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				773BE9551AACAB3D00930F47 /* Supporting Files */,
+				773BE9621AACAB3D00930F47 /* Main.storyboard */,
+				773BE9651AACAB3E00930F47 /* Images.xcassets */,
+				773BE9671AACAB3E00930F47 /* LaunchScreen.xib */,
+			);
+			name = Supports;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,15 +396,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7735797F1ABC49B1000153D2 /* key.png in Resources */,
 				778AD6C31AAE072700398C37 /* recommend.png in Resources */,
 				778AD6C11AAE072700398C37 /* news.png in Resources */,
 				778AD6C51AAE072700398C37 /* user.png in Resources */,
 				773BE9641AACAB3D00930F47 /* Main.storyboard in Resources */,
 				778AD6BE1AAE072700398C37 /* check.png in Resources */,
+				773579821ABC4BB5000153D2 /* lock.png in Resources */,
 				778AD6BF1AAE072700398C37 /* icon.png in Resources */,
 				778AD6BD1AAE072700398C37 /* Background.jpg in Resources */,
 				778AD6C01AAE072700398C37 /* logo.png in Resources */,
 				773BE9691AACAB3E00930F47 /* LaunchScreen.xib in Resources */,
+				773579831ABC4BB5000153D2 /* mail.png in Resources */,
 				773BE9661AACAB3E00930F47 /* Images.xcassets in Resources */,
 				778AD6C41AAE072700398C37 /* testimg.png in Resources */,
 				778AD6C21AAE072700398C37 /* portrait.jpg in Resources */,
@@ -375,6 +432,7 @@
 				778AD6AC1AAE065C00398C37 /* AFURLConnectionOperation.m in Sources */,
 				778AD6911AAE05E200398C37 /* LoginController.m in Sources */,
 				773BE9611AACAB3D00930F47 /* SecondViewController.m in Sources */,
+				7735797D1ABC442E000153D2 /* ZuSimpelColor.m in Sources */,
 				773BE95B1AACAB3D00930F47 /* AppDelegate.m in Sources */,
 				778AD6AE1AAE065C00398C37 /* AFURLResponseSerialization.m in Sources */,
 				778AD68E1AAE05D900398C37 /* RegisterController.m in Sources */,
