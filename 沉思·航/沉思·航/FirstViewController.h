@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CBStoreHouseRefreshControl.h"
 
-@interface FirstViewController : UIViewController <UIGestureRecognizerDelegate>
-@property (weak, nonatomic) IBOutlet UIWebView *webview;
+@class CBStoreHouseRefreshControl;
+
+@interface FirstViewController : UITableViewController
+
+@property (strong, nonatomic) CBStoreHouseRefreshControl *storeHouseRefreshControl;
 
 
 @end

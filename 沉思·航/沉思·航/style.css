@@ -1,0 +1,39 @@
+body {
+    font-family:"SentyTEA-Platinum";
+    padding: 0px;
+    margin: 10px;
+}
+p {
+    font-size: 15px;
+}
+
+
+pre {
+    whitewhite-space: pre-wrap; /* css-3 */
+    whitewhite-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+    whitewhite-space: -pre-wrap; /* Opera 4-6 */
+    whitewhite-space: -o-pre-wrap; /* Opera 7 */
+    word-wrap: break-word; /* Internet Explorer 5.5+ */
+    position: relative;
+    margin-bottom: 24px;
+    border-radius: 3px;
+    border: 1px solid black;
+    overflow: hidden;
+}
+
+code {
+    font-family: "DejaVuSansMono", monospace;
+    display: block;
+    padding: 12px 24px;
+    overflow-y: auto;
+    font-weight: 300;
+    font-size: 0.75em;
+}
+
+a {
+    color:deepskyblue;
+    underline:none;
+}
+
+
+

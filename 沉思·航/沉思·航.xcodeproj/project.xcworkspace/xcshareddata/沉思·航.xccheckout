@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>74BEF6A3-0B7C-4849-81E3-34B5BA340CB0</string>
 	<key>IDESourceControlProjectName</key>
-	<string>沉思·航</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>4B64D9240A8BE60BEA832135CFB95D1EA387CC9C</key>
 		<string>https://github.com/seanchain/CSHMobileClient</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>沉思·航/沉思·航.xcodeproj</string>
+	<string>沉思·航/沉思·航.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>4B64D9240A8BE60BEA832135CFB95D1EA387CC9C</key>
