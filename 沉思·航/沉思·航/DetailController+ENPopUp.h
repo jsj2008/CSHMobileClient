@@ -1,10 +1,3 @@
-//
-//  DetailController+ENPopUp.h
-//  微博
-//
-//  Created by Sean Chain on 3/27/15.
-//  Copyright (c) 2015 jinheng. All rights reserved.
-//
 
 #import "DetailController.h"
 

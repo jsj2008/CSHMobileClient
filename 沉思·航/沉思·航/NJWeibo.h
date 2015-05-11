@@ -1,10 +1,4 @@
-//
-//  NJWeibo.h
-//  06-预习-微博(通过代码自定义cell)
-//
-//  Created by 李南江 on 14-4-21.
-//  Copyright (c) 2014年 itcast. All rights reserved.
-//
+
 
 #import <Foundation/Foundation.h>
 

@@ -239,6 +239,14 @@
 		773BE9551AACAB3D00930F47 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				77414C711B003D040068FEB9 /* close.png */,
+				77414C3B1B0032AD0068FEB9 /* comments.png */,
+				77414C3F1B0032AD0068FEB9 /* csh.plist */,
+				77414C401B0032AD0068FEB9 /* DejaVuSansMono.ttf */,
+				77414C4F1B0032AD0068FEB9 /* newc.png */,
+				77414C521B0032AD0068FEB9 /* Senty.ttf */,
+				77414C531B0032AD0068FEB9 /* share.png */,
+				77414C541B0032AD0068FEB9 /* style.css */,
 				77FAD6D81AEF0F6F00FDA2CC /* mail.png */,
 				77FAD6D61AEF0E0F00FDA2CC /* key.png */,
 				77FAD6D41AEF0D9300FDA2CC /* user.png */,
@@ -269,6 +277,82 @@
 				773BE9731AACAB3E00930F47 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		77414C731B0042DB0068FEB9 /* HTMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				77414C451B0032AD0068FEB9 /* HTMLNode.h */,
+				77414C471B0032AD0068FEB9 /* HTMLParser.h */,
+				77414C461B0032AD0068FEB9 /* HTMLNode.m */,
+				77414C481B0032AD0068FEB9 /* HTMLParser.m */,
+			);
+			name = HTMLParser;
+			sourceTree = "<group>";
+		};
+		77414C741B00430C0068FEB9 /* Refresh */ = {
+			isa = PBXGroup;
+			children = (
+				77414C331B0032670068FEB9 /* BarItem.h */,
+				77414C341B0032670068FEB9 /* BarItem.m */,
+				77414C351B0032670068FEB9 /* CBStoreHouseRefreshControl.h */,
+				77414C361B0032670068FEB9 /* CBStoreHouseRefreshControl.m */,
+			);
+			name = Refresh;
+			sourceTree = "<group>";
+		};
+		77414C751B00432A0068FEB9 /* WeiboView */ = {
+			isa = PBXGroup;
+			children = (
+				77414C491B0032AD0068FEB9 /* JHWeiboCell.h */,
+				77414C4A1B0032AD0068FEB9 /* JHWeiboCell.m */,
+				77414C4B1B0032AD0068FEB9 /* JHWeiboFrame.h */,
+				77414C4C1B0032AD0068FEB9 /* JHWeiboFrame.m */,
+				77414C501B0032AD0068FEB9 /* NJWeibo.h */,
+				77414C511B0032AD0068FEB9 /* NJWeibo.m */,
+			);
+			name = WeiboView;
+			sourceTree = "<group>";
+		};
+		77414C761B0043430068FEB9 /* Comments */ = {
+			isa = PBXGroup;
+			children = (
+				77414C3E1B0032AD0068FEB9 /* ContextMenuCell.xib */,
+				77414C3C1B0032AD0068FEB9 /* ContextMenuCell.h */,
+				77414C3D1B0032AD0068FEB9 /* ContextMenuCell.m */,
+				77414C4D1B0032AD0068FEB9 /* JWBlurView.h */,
+				77414C4E1B0032AD0068FEB9 /* JWBlurView.m */,
+				77414C551B0032AD0068FEB9 /* UIView+YALConstraints.h */,
+				77414C561B0032AD0068FEB9 /* UIView+YALConstraints.m */,
+				77414C571B0032AD0068FEB9 /* YALContextMenuCell.h */,
+				77414C581B0032AD0068FEB9 /* YALContextMenuTableView.h */,
+				77414C591B0032AD0068FEB9 /* YALContextMenuTableView.m */,
+				77414C5A1B0032AD0068FEB9 /* YALNavigationBar.h */,
+				77414C5B1B0032AD0068FEB9 /* YALNavigationBar.m */,
+			);
+			name = Comments;
+			sourceTree = "<group>";
+		};
+		77414C771B00437B0068FEB9 /* FunctionHelper */ = {
+			isa = PBXGroup;
+			children = (
+				778AD6891AAE05B900398C37 /* Func.h */,
+				778AD68A1AAE05B900398C37 /* Func.m */,
+			);
+			name = FunctionHelper;
+			sourceTree = "<group>";
+		};
+		77414C781B00438A0068FEB9 /* BlogViewController */ = {
+			isa = PBXGroup;
+			children = (
+				77414C391B0032AD0068FEB9 /* CommentController.h */,
+				77414C3A1B0032AD0068FEB9 /* CommentController.m */,
+				77414C411B0032AD0068FEB9 /* DetailController.h */,
+				77414C421B0032AD0068FEB9 /* DetailController.m */,
+				77414C431B0032AD0068FEB9 /* DetailController+ENPopUp.h */,
+				77414C441B0032AD0068FEB9 /* DetailController+ENPopUp.m */,
+			);
+			name = BlogViewController;
 			sourceTree = "<group>";
 		};
 		778AD6921AAE065C00398C37 /* AFNetworking */ = {
@@ -349,48 +433,12 @@
 		779EB33A1AB8004600E3CC16 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				77414C711B003D040068FEB9 /* close.png */,
-				77414C541B0032AD0068FEB9 /* style.css */,
-				77414C331B0032670068FEB9 /* BarItem.h */,
-				77414C351B0032670068FEB9 /* CBStoreHouseRefreshControl.h */,
-				77414C391B0032AD0068FEB9 /* CommentController.h */,
-				77414C3C1B0032AD0068FEB9 /* ContextMenuCell.h */,
-				77414C411B0032AD0068FEB9 /* DetailController.h */,
-				77414C431B0032AD0068FEB9 /* DetailController+ENPopUp.h */,
-				778AD6891AAE05B900398C37 /* Func.h */,
-				77414C451B0032AD0068FEB9 /* HTMLNode.h */,
-				77414C471B0032AD0068FEB9 /* HTMLParser.h */,
-				77414C491B0032AD0068FEB9 /* JHWeiboCell.h */,
-				77414C4B1B0032AD0068FEB9 /* JHWeiboFrame.h */,
-				77414C4D1B0032AD0068FEB9 /* JWBlurView.h */,
-				77414C501B0032AD0068FEB9 /* NJWeibo.h */,
-				77414C551B0032AD0068FEB9 /* UIView+YALConstraints.h */,
-				77414C571B0032AD0068FEB9 /* YALContextMenuCell.h */,
-				77414C581B0032AD0068FEB9 /* YALContextMenuTableView.h */,
-				77414C5A1B0032AD0068FEB9 /* YALNavigationBar.h */,
-				77414C341B0032670068FEB9 /* BarItem.m */,
-				77414C361B0032670068FEB9 /* CBStoreHouseRefreshControl.m */,
-				77414C3A1B0032AD0068FEB9 /* CommentController.m */,
-				77414C3D1B0032AD0068FEB9 /* ContextMenuCell.m */,
-				77414C421B0032AD0068FEB9 /* DetailController.m */,
-				77414C441B0032AD0068FEB9 /* DetailController+ENPopUp.m */,
-				778AD68A1AAE05B900398C37 /* Func.m */,
-				77414C461B0032AD0068FEB9 /* HTMLNode.m */,
-				77414C481B0032AD0068FEB9 /* HTMLParser.m */,
-				77414C4A1B0032AD0068FEB9 /* JHWeiboCell.m */,
-				77414C4C1B0032AD0068FEB9 /* JHWeiboFrame.m */,
-				77414C4E1B0032AD0068FEB9 /* JWBlurView.m */,
-				77414C511B0032AD0068FEB9 /* NJWeibo.m */,
-				77414C561B0032AD0068FEB9 /* UIView+YALConstraints.m */,
-				77414C591B0032AD0068FEB9 /* YALContextMenuTableView.m */,
-				77414C5B1B0032AD0068FEB9 /* YALNavigationBar.m */,
-				77414C3F1B0032AD0068FEB9 /* csh.plist */,
-				77414C3B1B0032AD0068FEB9 /* comments.png */,
-				77414C4F1B0032AD0068FEB9 /* newc.png */,
-				77414C531B0032AD0068FEB9 /* share.png */,
-				77414C401B0032AD0068FEB9 /* DejaVuSansMono.ttf */,
-				77414C521B0032AD0068FEB9 /* Senty.ttf */,
-				77414C3E1B0032AD0068FEB9 /* ContextMenuCell.xib */,
+				77414C741B00430C0068FEB9 /* Refresh */,
+				77414C781B00438A0068FEB9 /* BlogViewController */,
+				77414C761B0043430068FEB9 /* Comments */,
+				77414C771B00437B0068FEB9 /* FunctionHelper */,
+				77414C731B0042DB0068FEB9 /* HTMLParser */,
+				77414C751B00432A0068FEB9 /* WeiboView */,
 			);
 			name = Assets;
 			sourceTree = "<group>";

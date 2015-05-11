@@ -1,10 +1,3 @@
-//
-//  BarItem.h
-//  CBStoreHouseRefreshControl
-//
-//  Created by coolbeet on 10/30/14.
-//  Copyright (c) 2014 Suyu Zhang. All rights reserved.
-//
 
 #import <UIKit/UIKit.h>
 
