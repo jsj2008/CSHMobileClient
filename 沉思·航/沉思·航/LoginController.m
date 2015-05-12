@@ -33,6 +33,7 @@
     [super viewDidLoad];
     if ([self isValidUser]) {
         self.view = [[UIView alloc] init];
+        self.view.backgroundColor = [UIColor whiteColor];
     }
     else{
         [passwd addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventAllTouchEvents];
@@ -117,7 +118,7 @@
 {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     if ([ud valueForKey:@"user"]) {
-        return NO;
+        return YES;
     }
     else
         return NO;

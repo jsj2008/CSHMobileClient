@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThirdViewController : UINavigationController
+@interface ThirdViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *idoremail;
+@property (weak, nonatomic) IBOutlet UITextField *password;
+- (IBAction)queryScore:(id)sender;
 
 @end

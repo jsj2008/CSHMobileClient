@@ -36,35 +36,6 @@
             </objects>
             <point key="canvasLocation" x="148.5" y="486.5"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="7ZA-7s-b9o">
-            <objects>
-                <tableViewController id="6ry-aN-fRv" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="haX-pG-hFT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="cRl-cd-mMa">
-                                <rect key="frame" x="0.0" y="86" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cRl-cd-mMa" id="PBc-Pf-eIz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="6ry-aN-fRv" id="EE0-ow-hzK"/>
-                            <outlet property="delegate" destination="6ry-aN-fRv" id="PTy-Fi-Ode"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="HTe-xx-L7d"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ic-LW-d2d" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1041.5" y="1114.5"/>
-        </scene>
         <!--用户-->
         <scene sceneID="Ihw-UK-EOI">
             <objects>
@@ -126,13 +97,70 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
-                    <connections>
-                        <segue destination="6ry-aN-fRv" kind="relationship" relationship="rootViewController" id="OR4-z4-nRv"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQ7-ow-HTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="473.5" y="1181.5"/>
+            <point key="canvasLocation" x="347.5" y="1240.5"/>
+        </scene>
+        <!--沉思·航-->
+        <scene sceneID="2ey-ut-Ex2">
+            <objects>
+                <viewController id="tNh-iH-m0k" customClass="ThirdViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hgu-iY-fEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="学号" minimumFontSize="17" id="wmn-Vk-g1H">
+                                <rect key="frame" x="25" y="214" width="324" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" minimumFontSize="17" id="rys-eD-lsV">
+                                <rect key="frame" x="25" y="254" width="324" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aNN-QO-5pm">
+                                <rect key="frame" x="74" y="361" width="226" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.087100908160209656" green="0.36507266759872437" blue="0.75903433561325073" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="STHeitiSC-Medium" family="Heiti SC" pointSize="15"/>
+                                <color key="tintColor" red="0.122645927" green="0.74587046940000001" blue="0.54727242450000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="查成绩">
+                                    <color key="titleColor" red="1" green="0.99997437" blue="0.99999129769999995" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="queryScore:" destination="tNh-iH-m0k" eventType="touchUpInside" id="FmO-R4-j3m"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="四川大学教务处系统" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Scl-12-944">
+                                <rect key="frame" x="83" y="123" width="209" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="23"/>
+                                <color key="textColor" red="0.97530043125152588" green="0.97527122497558594" blue="0.9752877950668335" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.06604708731174469" green="0.53076654672622681" blue="0.75918382406234741" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="教务系统" image="first" id="rCN-Ld-RMV"/>
+                    <navigationItem key="navigationItem" title="沉思·航" id="9gQ-L5-MWp">
+                        <barButtonItem key="backBarButtonItem" title="退出" id="wJB-16-FKm"/>
+                    </navigationItem>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="idoremail" destination="wmn-Vk-g1H" id="ifr-ES-GrI"/>
+                        <outlet property="password" destination="rys-eD-lsV" id="s6I-Mj-Ekr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hWa-ty-4cF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="536.5" y="1038.5"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="d7g-IU-xry">
@@ -362,7 +390,7 @@
                     <connections>
                         <segue destination="xrg-Yu-u7l" kind="relationship" relationship="viewControllers" id="N4D-la-mEw"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="xju-ER-trU" kind="relationship" relationship="viewControllers" id="uw9-v5-gob"/>
+                        <segue destination="tNh-iH-m0k" kind="relationship" relationship="viewControllers" id="knP-HA-aT2"/>
                         <segue destination="F5q-E8-3uD" kind="relationship" relationship="viewControllers" id="ouu-Rh-0tr"/>
                     </connections>
                 </tabBarController>
@@ -406,7 +434,6 @@
         <!--博客-->
         <scene sceneID="byD-Qf-47C">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KGw-qb-rVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="xrg-Yu-u7l" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="博客" image="first" id="8b5-aw-hr3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YjN-Pe-0ky">
@@ -417,6 +444,7 @@
                         <segue destination="gKM-Lo-Oim" kind="relationship" relationship="rootViewController" id="29Z-19-a9t"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KGw-qb-rVS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="674" y="-426"/>
         </scene>
@@ -469,7 +497,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bAw-IX-cer"/>
-        <segue reference="grH-wD-He7"/>
+        <segue reference="miB-FK-IY0"/>
+        <segue reference="W90-ih-8GO"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -41,6 +41,11 @@
 		77414C6F1B0032AD0068FEB9 /* YALContextMenuTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77414C591B0032AD0068FEB9 /* YALContextMenuTableView.m */; };
 		77414C701B0032AD0068FEB9 /* YALNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 77414C5B1B0032AD0068FEB9 /* YALNavigationBar.m */; };
 		77414C721B003D040068FEB9 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 77414C711B003D040068FEB9 /* close.png */; };
+		7784F53B1B0241F900ED262C /* ASFLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F5321B0241F900ED262C /* ASFLabel.m */; };
+		7784F53C1B0241F900ED262C /* ASFTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F5341B0241F900ED262C /* ASFTableView.m */; };
+		7784F53D1B0241F900ED262C /* ASFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F5361B0241F900ED262C /* ASFTableViewCell.m */; };
+		7784F53E1B0241F900ED262C /* ASFTableViewPrivateGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F5381B0241F900ED262C /* ASFTableViewPrivateGlobals.m */; };
+		7784F53F1B0241F900ED262C /* ASFTableViewPublicGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F53A1B0241F900ED262C /* ASFTableViewPublicGlobals.m */; };
 		778AD68B1AAE05B900398C37 /* Func.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AD68A1AAE05B900398C37 /* Func.m */; };
 		778AD68E1AAE05D900398C37 /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AD68D1AAE05D900398C37 /* RegisterController.m */; };
 		778AD6911AAE05E200398C37 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AD6901AAE05E200398C37 /* LoginController.m */; };
@@ -138,6 +143,16 @@
 		77414C5A1B0032AD0068FEB9 /* YALNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YALNavigationBar.h; sourceTree = "<group>"; };
 		77414C5B1B0032AD0068FEB9 /* YALNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YALNavigationBar.m; sourceTree = "<group>"; };
 		77414C711B003D040068FEB9 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
+		7784F5311B0241F900ED262C /* ASFLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFLabel.h; sourceTree = "<group>"; };
+		7784F5321B0241F900ED262C /* ASFLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFLabel.m; sourceTree = "<group>"; };
+		7784F5331B0241F900ED262C /* ASFTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFTableView.h; sourceTree = "<group>"; };
+		7784F5341B0241F900ED262C /* ASFTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFTableView.m; sourceTree = "<group>"; };
+		7784F5351B0241F900ED262C /* ASFTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFTableViewCell.h; sourceTree = "<group>"; };
+		7784F5361B0241F900ED262C /* ASFTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFTableViewCell.m; sourceTree = "<group>"; };
+		7784F5371B0241F900ED262C /* ASFTableViewPrivateGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFTableViewPrivateGlobals.h; sourceTree = "<group>"; };
+		7784F5381B0241F900ED262C /* ASFTableViewPrivateGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFTableViewPrivateGlobals.m; sourceTree = "<group>"; };
+		7784F5391B0241F900ED262C /* ASFTableViewPublicGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFTableViewPublicGlobals.h; sourceTree = "<group>"; };
+		7784F53A1B0241F900ED262C /* ASFTableViewPublicGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFTableViewPublicGlobals.m; sourceTree = "<group>"; };
 		778AD6891AAE05B900398C37 /* Func.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Func.h; sourceTree = "<group>"; };
 		778AD68A1AAE05B900398C37 /* Func.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Func.m; sourceTree = "<group>"; };
 		778AD68C1AAE05D900398C37 /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterController.h; sourceTree = "<group>"; };
@@ -433,6 +448,16 @@
 		779EB33A1AB8004600E3CC16 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				7784F5311B0241F900ED262C /* ASFLabel.h */,
+				7784F5321B0241F900ED262C /* ASFLabel.m */,
+				7784F5331B0241F900ED262C /* ASFTableView.h */,
+				7784F5341B0241F900ED262C /* ASFTableView.m */,
+				7784F5351B0241F900ED262C /* ASFTableViewCell.h */,
+				7784F5361B0241F900ED262C /* ASFTableViewCell.m */,
+				7784F5371B0241F900ED262C /* ASFTableViewPrivateGlobals.h */,
+				7784F5381B0241F900ED262C /* ASFTableViewPrivateGlobals.m */,
+				7784F5391B0241F900ED262C /* ASFTableViewPublicGlobals.h */,
+				7784F53A1B0241F900ED262C /* ASFTableViewPublicGlobals.m */,
 				77414C741B00430C0068FEB9 /* Refresh */,
 				77414C781B00438A0068FEB9 /* BlogViewController */,
 				77414C761B0043430068FEB9 /* Comments */,
@@ -584,15 +609,19 @@
 				77414C641B0032AD0068FEB9 /* HTMLNode.m in Sources */,
 				77414C5C1B0032AD0068FEB9 /* CommentController.m in Sources */,
 				778AD6B31AAE066900398C37 /* VPImageCropperViewController.m in Sources */,
+				7784F53B1B0241F900ED262C /* ASFLabel.m in Sources */,
 				77414C661B0032AD0068FEB9 /* JHWeiboCell.m in Sources */,
 				77414C631B0032AD0068FEB9 /* DetailController+ENPopUp.m in Sources */,
 				778AD6AC1AAE065C00398C37 /* AFURLConnectionOperation.m in Sources */,
+				7784F53E1B0241F900ED262C /* ASFTableViewPrivateGlobals.m in Sources */,
 				778AD6911AAE05E200398C37 /* LoginController.m in Sources */,
 				773BE9611AACAB3D00930F47 /* SecondViewController.m in Sources */,
 				77414C701B0032AD0068FEB9 /* YALNavigationBar.m in Sources */,
+				7784F53D1B0241F900ED262C /* ASFTableViewCell.m in Sources */,
 				7735797D1ABC442E000153D2 /* ZuSimpelColor.m in Sources */,
 				773BE95B1AACAB3D00930F47 /* AppDelegate.m in Sources */,
 				778AD6AE1AAE065C00398C37 /* AFURLResponseSerialization.m in Sources */,
+				7784F53C1B0241F900ED262C /* ASFTableView.m in Sources */,
 				778AD68E1AAE05D900398C37 /* RegisterController.m in Sources */,
 				778AD6AD1AAE065C00398C37 /* AFURLRequestSerialization.m in Sources */,
 				778AD6AB1AAE065C00398C37 /* AFSecurityPolicy.m in Sources */,
@@ -613,6 +642,7 @@
 				77414C681B0032AD0068FEB9 /* JWBlurView.m in Sources */,
 				77B492901AAEEE140009E0C0 /* FourthViewController.m in Sources */,
 				77414C671B0032AD0068FEB9 /* JHWeiboFrame.m in Sources */,
+				7784F53F1B0241F900ED262C /* ASFTableViewPublicGlobals.m in Sources */,
 				77414C6E1B0032AD0068FEB9 /* UIView+YALConstraints.m in Sources */,
 				773BE9581AACAB3D00930F47 /* main.m in Sources */,
 				778AD6AA1AAE065C00398C37 /* AFNetworkReachabilityManager.m in Sources */,

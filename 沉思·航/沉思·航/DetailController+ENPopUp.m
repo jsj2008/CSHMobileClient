@@ -1,10 +1,3 @@
-//
-//  DetailController+ENPopUp.m
-//  微博
-//
-//  Created by Sean Chain on 3/27/15.
-//  Copyright (c) 2015 jinheng. All rights reserved.
-//
 
 #import "DetailController+ENPopUp.h"
 #import "JWBlurView.h"
