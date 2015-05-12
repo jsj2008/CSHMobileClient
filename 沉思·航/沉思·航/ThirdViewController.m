@@ -63,12 +63,11 @@
     NSString *urlstr = [NSString stringWithFormat:@"http://www.chensihang.com/iostest/iosjwc.php?zjh=%@&mm=%@&scorechecktype=%@", zjh, mm, info];
     NSURL *url = [NSURL URLWithString:urlstr];
     NSString *response = [[NSString alloc] initWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
-    [Func showAlert:response];
+    response = [response stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     if ([response isEqualToString:@"fail"]) {
         //此时用户输入的用户名和密码并不正确。
-        NSLog(@"123");
         [Func showAlert:@"密码输入错误，请重试！"];
-    } 
+    }
     NSData *jsonData = [response dataUsingEncoding:NSUTF8StringEncoding];
     id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
     NSLog(@"%@", jsonObject);
