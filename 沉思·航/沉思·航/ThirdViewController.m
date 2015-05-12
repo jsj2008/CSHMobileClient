@@ -9,6 +9,7 @@
 #import "ThirdViewController.h"
 #import "ZuSimpelColor.h"
 #import "ASFTableView.h"
+#import "ScoreController.h"
 #import "Func.h"
 
 @interface ThirdViewController ()
@@ -45,18 +46,16 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    ScoreController *sc = [segue destinationViewController];
+    [sc setValue:[self getScoreJson] forKey:@"json"];
 }
-*/
 
-- (IBAction)queryScore:(id)sender {
-    NSLog(@"Hello, worlder");
+
+- (id)getScoreJson{
     NSString *zjh = idoremail.text;
     NSString *mm = password.text;
     NSString *info = @"allsem";
@@ -70,6 +69,6 @@
     }
     NSData *jsonData = [response dataUsingEncoding:NSUTF8StringEncoding];
     id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
-    NSLog(@"%@", jsonObject);
+    return jsonObject;
 }
 @end

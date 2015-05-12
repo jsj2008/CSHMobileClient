@@ -88,19 +88,19 @@
             </objects>
             <point key="canvasLocation" x="1560.5" y="316.5"/>
         </scene>
-        <!--教务系统-->
-        <scene sceneID="bor-Gp-UiC">
+        <!--Score Controller-->
+        <scene sceneID="6Sg-mc-qXa">
             <objects>
-                <navigationController id="xju-ER-trU" customClass="ThirdViewController" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="教务系统" image="second" id="Yhk-ga-aSX"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ig6-1l-XMs">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cQ7-ow-HTr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="qWh-pa-E4V" customClass="ScoreController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5M8-oz-lFn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GAV-3K-X3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="347.5" y="1240.5"/>
+            <point key="canvasLocation" x="556.5" y="1833.5"/>
         </scene>
         <!--沉思·航-->
         <scene sceneID="2ey-ut-Ex2">
@@ -135,7 +135,7 @@
                                     <color key="titleShadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="queryScore:" destination="tNh-iH-m0k" eventType="touchUpInside" id="FmO-R4-j3m"/>
+                                    <segue destination="qWh-pa-E4V" kind="modal" id="dzf-Fc-SKO"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="四川大学教务处系统" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Scl-12-944">

@@ -46,6 +46,7 @@
 		7784F53D1B0241F900ED262C /* ASFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F5361B0241F900ED262C /* ASFTableViewCell.m */; };
 		7784F53E1B0241F900ED262C /* ASFTableViewPrivateGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F5381B0241F900ED262C /* ASFTableViewPrivateGlobals.m */; };
 		7784F53F1B0241F900ED262C /* ASFTableViewPublicGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F53A1B0241F900ED262C /* ASFTableViewPublicGlobals.m */; };
+		7784F5481B024B9500ED262C /* ScoreController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F5471B024B9500ED262C /* ScoreController.m */; };
 		778AD68B1AAE05B900398C37 /* Func.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AD68A1AAE05B900398C37 /* Func.m */; };
 		778AD68E1AAE05D900398C37 /* RegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AD68D1AAE05D900398C37 /* RegisterController.m */; };
 		778AD6911AAE05E200398C37 /* LoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 778AD6901AAE05E200398C37 /* LoginController.m */; };
@@ -153,6 +154,8 @@
 		7784F5381B0241F900ED262C /* ASFTableViewPrivateGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFTableViewPrivateGlobals.m; sourceTree = "<group>"; };
 		7784F5391B0241F900ED262C /* ASFTableViewPublicGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFTableViewPublicGlobals.h; sourceTree = "<group>"; };
 		7784F53A1B0241F900ED262C /* ASFTableViewPublicGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFTableViewPublicGlobals.m; sourceTree = "<group>"; };
+		7784F5461B024B9500ED262C /* ScoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreController.h; path = "沉思·航/ScoreController.h"; sourceTree = "<group>"; };
+		7784F5471B024B9500ED262C /* ScoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreController.m; path = "沉思·航/ScoreController.m"; sourceTree = "<group>"; };
 		778AD6891AAE05B900398C37 /* Func.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Func.h; sourceTree = "<group>"; };
 		778AD68A1AAE05B900398C37 /* Func.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Func.m; sourceTree = "<group>"; };
 		778AD68C1AAE05D900398C37 /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterController.h; sourceTree = "<group>"; };
@@ -221,6 +224,8 @@
 		773BE9491AACAB3D00930F47 = {
 			isa = PBXGroup;
 			children = (
+				7784F5461B024B9500ED262C /* ScoreController.h */,
+				7784F5471B024B9500ED262C /* ScoreController.m */,
 				77414C311B002F870068FEB9 /* libxml2.dylib */,
 				773BE9541AACAB3D00930F47 /* 沉思·航 */,
 				773BE9711AACAB3E00930F47 /* 沉思·航Tests */,
@@ -614,6 +619,7 @@
 				77414C631B0032AD0068FEB9 /* DetailController+ENPopUp.m in Sources */,
 				778AD6AC1AAE065C00398C37 /* AFURLConnectionOperation.m in Sources */,
 				7784F53E1B0241F900ED262C /* ASFTableViewPrivateGlobals.m in Sources */,
+				7784F5481B024B9500ED262C /* ScoreController.m in Sources */,
 				778AD6911AAE05E200398C37 /* LoginController.m in Sources */,
 				773BE9611AACAB3D00930F47 /* SecondViewController.m in Sources */,
 				77414C701B0032AD0068FEB9 /* YALNavigationBar.m in Sources */,
