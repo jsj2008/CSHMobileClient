@@ -63,6 +63,7 @@
     NSURL *url = [NSURL URLWithString:urlstr];
     NSString *response = [[NSString alloc] initWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
     response = [response stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    NSLog(@"%@", response);
     if ([response isEqualToString:@"fail"]) {
         //此时用户输入的用户名和密码并不正确。
         [Func showAlert:@"密码输入错误，请重试！"];

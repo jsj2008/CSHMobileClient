@@ -24,8 +24,13 @@
     id jsonObject = json;
     CGRect statusBarFrame = [[UIApplication sharedApplication] statusBarFrame];
     CGFloat barh = statusBarFrame.size.height;
-    ASFTableView *mytableview = [[ASFTableView alloc] initWithFrame:CGRectMake(0, barh, self.view.frame.size.width, self.view.frame.size.height - barh)];
+    CGFloat header = self.view.frame.size.height * 0.05;
+    ASFTableView *mytableview = [[ASFTableView alloc] initWithFrame:CGRectMake(0, barh + header, self.view.frame.size.width, self.view.frame.size.height - barh - header)];
     mytableview.backgroundColor = [UIColor colorWithRed:0.0f green:91.0f/255 blue:171.0f/255 alpha:1.0];
+    UILabel *welcomeview = [[UILabel alloc] initWithFrame:CGRectMake(0, barh, self.view.frame.size.width, header)];
+    NSString *username = @"";
+    welcomeview.text = [NSString stringWithFormat:@"欢迎你, %@", username];
+    [self.view addSubview:welcomeview];
     [self.view addSubview:mytableview];
     NSArray *cols = @[@"课程号",@"课程名",@"学分",@"成绩"];
     NSArray *weights = @[@(0.30f),@(0.42f),@(0.13f),@(0.15f)];
@@ -64,7 +69,30 @@
                                       kASF_OPTION_CELL_BORDER_SIZE: @(0.5),
                                       kASF_OPTION_CELL_BORDER_COLOR : [UIColor colorWithRed:0.87 green:0.87 blue:0.87 alpha:1]}}];
     }
-    
+    NSUInteger num = [jsonObject count] - 1;
+    NSString *avgscore = jsonObject[num][0];
+    NSString *gpa = jsonObject[num][1];
+    NSLog(@"%@--%@", avgscore, gpa);
+    [_rowsArray addObject:@{
+                            kASF_ROW_ID:@(num),
+                            kASF_ROW_CELLS:@[@{kASF_CELL_TITLE: @"加权平均"}, @{kASF_CELL_TITLE : avgscore, kASF_OPTION_CELL_TEXT_ALIGNMENT:@(NSTextAlignmentCenter)}, @{}, @{}],
+                            kASF_ROW_OPTIONS:
+                                @{kASF_OPTION_BACKGROUND : ([UIColor whiteColor]),
+                                  kASF_OPTION_CELL_TEXT_FONT_SIZE: @(12),
+                                  kASF_OPTION_CELL_PADDING : @(4),
+                                  kASF_OPTION_CELL_BORDER_SIZE: @(0.0),
+                                  kASF_OPTION_CELL_BORDER_COLOR : [UIColor whiteColor]}
+                            }]; //添加平均成绩部分
+    [_rowsArray addObject:@{
+                            kASF_ROW_ID:@(num + 1),
+                            kASF_ROW_CELLS:@[@{kASF_CELL_TITLE:@"GPA"}, @{kASF_CELL_TITLE: gpa, kASF_OPTION_CELL_TEXT_ALIGNMENT:@(NSTextAlignmentCenter)},  @{}, @{}],
+                            kASF_ROW_OPTIONS:
+                                @{kASF_OPTION_BACKGROUND : ([UIColor whiteColor]),
+                                  kASF_OPTION_CELL_TEXT_FONT_SIZE: @(12),
+                                  kASF_OPTION_CELL_PADDING : @(4),
+                                  kASF_OPTION_CELL_BORDER_SIZE: @(0.0),
+                                  kASF_OPTION_CELL_BORDER_COLOR : [UIColor whiteColor]}
+                            }]; //添加GPA部分
     [mytableview setRows:_rowsArray];
     // Do any additional setup after loading the view, typically from a nib.
 }
