@@ -21,6 +21,7 @@
 @synthesize idoremail;
 @synthesize password;
 
+id jsonObject;
 - (void)viewDidLoad {
     [super viewDidLoad];
     UIView *paddingView1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 18, 20)];
@@ -51,11 +52,11 @@
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     ScoreController *sc = [segue destinationViewController];
-    [sc setValue:[self getScoreJson] forKey:@"json"];
+    [sc setValue:jsonObject forKey:@"json"];
 }
 
 
-- (id)getScoreJson{
+- (IBAction)queryScore:(id)sender {
     NSString *zjh = idoremail.text;
     NSString *mm = password.text;
     NSString *info = @"allsem";
@@ -66,10 +67,12 @@
     NSLog(@"%@", response);
     if ([response isEqualToString:@"fail"]) {
         //此时用户输入的用户名和密码并不正确。
-        [Func showAlert:@"密码输入错误，请重试！"];
+        [Func showAlert:@"Hello, worlder"];
     }
-    NSData *jsonData = [response dataUsingEncoding:NSUTF8StringEncoding];
-    id jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
-    return jsonObject;
+    else {
+        NSData *jsonData = [response dataUsingEncoding:NSUTF8StringEncoding];
+        jsonObject = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
+        [self performSegueWithIdentifier:@"score" sender:self.view];
+    }
 }
 @end
