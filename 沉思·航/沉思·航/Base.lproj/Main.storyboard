@@ -34,7 +34,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="148.5" y="486.5"/>
+            <point key="canvasLocation" x="-163.5" y="472.5"/>
         </scene>
         <!--用户-->
         <scene sceneID="Ihw-UK-EOI">
@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlF-nO-sGS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1103.5" y="299.5"/>
+            <point key="canvasLocation" x="1044.5" y="306.5"/>
         </scene>
         <!--Info Details-->
         <scene sceneID="7a0-Vj-WyD">
@@ -98,12 +98,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="tNh-iH-m0k" kind="modal" identifier="back" id="FIp-il-O2W"/>
+                        <segue destination="49e-Tb-3d3" kind="modal" identifier="back" id="YpR-qs-Bfu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GAV-3K-X3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6.5" y="1264.5"/>
+            <point key="canvasLocation" x="230.5" y="747.5"/>
         </scene>
         <!--沉思·航-->
         <scene sceneID="2ey-ut-Ex2">
@@ -164,7 +164,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWa-ty-4cF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="589.5" y="1347.5"/>
+            <point key="canvasLocation" x="666.5" y="1132.5"/>
         </scene>
         <!--Login Controller-->
         <scene sceneID="d7g-IU-xry">
@@ -501,8 +501,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="bAw-IX-cer"/>
+        <segue reference="YpR-qs-Bfu"/>
         <segue reference="W90-ih-8GO"/>
-        <segue reference="FIp-il-O2W"/>
     </inferredMetricsTieBreakers>
 </document>
