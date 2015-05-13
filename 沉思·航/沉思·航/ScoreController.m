@@ -27,9 +27,14 @@
     CGFloat header = self.view.frame.size.height * 0.05;
     ASFTableView *mytableview = [[ASFTableView alloc] initWithFrame:CGRectMake(0, barh + header, self.view.frame.size.width, self.view.frame.size.height - barh - header)];
     mytableview.backgroundColor = [UIColor colorWithRed:0.0f green:91.0f/255 blue:171.0f/255 alpha:1.0];
-    UILabel *welcomeview = [[UILabel alloc] initWithFrame:CGRectMake(0, barh, self.view.frame.size.width, header)];
-    NSString *username = @"";
-    welcomeview.text = [NSString stringWithFormat:@"欢迎你, %@", username];
+    UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    [img setImage:[UIImage imageNamed:@"back.png"]];
+    UIView *welcomeview = [[UIView alloc] initWithFrame:CGRectMake(0, barh, self.view.frame.size.width, header)];
+    NSString *username = jsonObject[[jsonObject count] - 1][2];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, header)];
+    label.text = [NSString stringWithFormat:@"\t欢迎你, %@", username];
+    [welcomeview addSubview:img];
+    [welcomeview addSubview:label];
     [self.view addSubview:welcomeview];
     [self.view addSubview:mytableview];
     NSArray *cols = @[@"课程号",@"课程名",@"学分",@"成绩"];
