@@ -97,10 +97,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <segue destination="tNh-iH-m0k" kind="modal" identifier="back" id="FIp-il-O2W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GAV-3K-X3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="176" y="1367"/>
+            <point key="canvasLocation" x="-6.5" y="1264.5"/>
         </scene>
         <!--沉思·航-->
         <scene sceneID="2ey-ut-Ex2">
@@ -500,5 +503,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="bAw-IX-cer"/>
         <segue reference="W90-ih-8GO"/>
+        <segue reference="FIp-il-O2W"/>
     </inferredMetricsTieBreakers>
 </document>

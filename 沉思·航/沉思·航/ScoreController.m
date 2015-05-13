@@ -21,18 +21,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(imageTaped:)];
+    singleTap.numberOfTapsRequired = 1;
+    singleTap.numberOfTouchesRequired = 1;
     id jsonObject = json;
     CGRect statusBarFrame = [[UIApplication sharedApplication] statusBarFrame];
     CGFloat barh = statusBarFrame.size.height;
     CGFloat header = self.view.frame.size.height * 0.05;
     ASFTableView *mytableview = [[ASFTableView alloc] initWithFrame:CGRectMake(0, barh + header, self.view.frame.size.width, self.view.frame.size.height - barh - header)];
     mytableview.backgroundColor = [UIColor colorWithRed:0.0f green:91.0f/255 blue:171.0f/255 alpha:1.0];
-    UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 20, 20)];
+    UIImageView *img = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, header, header)];
     [img setImage:[UIImage imageNamed:@"back.png"]];
+    [img addGestureRecognizer:singleTap];
+    [img setUserInteractionEnabled:YES];
     UIView *welcomeview = [[UIView alloc] initWithFrame:CGRectMake(0, barh, self.view.frame.size.width, header)];
     NSString *username = jsonObject[[jsonObject count] - 1][2];
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, header)];
-    label.text = [NSString stringWithFormat:@"\t欢迎你, %@", username];
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(header * 1.2, 0, self.view.frame.size.width, header)];
+    label.text = [NSString stringWithFormat:@"欢迎你, %@", username];
     [welcomeview addSubview:img];
     [welcomeview addSubview:label];
     [self.view addSubview:welcomeview];
@@ -113,6 +118,11 @@
         _rowsArray = [[NSMutableArray alloc] init];
     }
     return self;
+}
+
+- (void)imageTaped:(UIGestureRecognizer *)gestureRecognizer {
+    NSLog(@"Hello, worlder");
+    [self performSegueWithIdentifier:@"back" sender:self.view];
 }
 
 @end
