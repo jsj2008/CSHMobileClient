@@ -2,6 +2,7 @@
 
 #import "FourthViewController.h"
 #import "AppDelegate.h"
+#import "ZuSimpelColor.h"
 
 @interface FourthViewController ()
 
@@ -23,6 +24,11 @@ NSIndexPath *idxpth;
     // Do any additional setup after loading the view, typically from a nib.
     float x = self.view.frame.size.width;
     float y = self.view.frame.size.height;
+    self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+    self.navigationController.navigationBar.barTintColor = darkorange;
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
+    // self.navigationController.navigati
     [self.view addSubview:toolbar];
     table = [[UITableView alloc] initWithFrame:CGRectMake(0, y * 0.096, x, y * 0.904) style:UITableViewStylePlain];
     table.delegate = self;
@@ -54,13 +60,6 @@ NSIndexPath *idxpth;
 {
     // 由于该表格只有一个分区，直接返回books中集合元素个数代表表格的行数
     return content.count;
-}
-
-- (NSArray *)getNewsURL:(UIBarButtonItem*)sender{
-    NSString *keyword = [sender title];
-    //进行一系列的获取新闻URL的操作并将所得的URL结果以数组的形式过滤
-    NSArray *ary = @[@"http://chensihang/iostest/newsone.html", @"http://chensihang/iostest/newstwo.html"];
-    return ary;
 }
 
 - (BOOL) tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
