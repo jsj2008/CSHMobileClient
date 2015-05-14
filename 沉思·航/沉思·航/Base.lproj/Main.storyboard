@@ -60,27 +60,79 @@
                         <barButtonItem key="backBarButtonItem" title="后退" id="oUT-ON-l7V"/>
                     </navigationItem>
                     <connections>
-                        <segue destination="YEr-kz-sBO" kind="push" identifier="info" id="nnT-AO-r1g"/>
+                        <segue destination="eir-oA-cEg" kind="push" identifier="about" id="HI9-k8-LVg"/>
+                        <segue destination="11c-AJ-p7w" kind="push" identifier="info" id="YYN-14-zTy"/>
+                        <segue destination="q15-Xq-qRL" kind="push" identifier="theme" id="F2b-N0-88P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlF-nO-sGS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1044.5" y="306.5"/>
+            <point key="canvasLocation" x="1182.5" y="1073.5"/>
         </scene>
-        <!--Info Details-->
-        <scene sceneID="7a0-Vj-WyD">
+        <!--Preference Controller-->
+        <scene sceneID="QeQ-vH-QPi">
             <objects>
-                <viewController id="YEr-kz-sBO" customClass="InfoDetails" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="kVn-gH-X3p">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="11c-AJ-p7w" customClass="PreferenceController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VJe-Jb-svH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="vYA-6m-dac"/>
+                    <navigationItem key="navigationItem" id="k7q-v9-2w6"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="r84-NC-TqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hh1-Xa-lfk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1560.5" y="316.5"/>
+            <point key="canvasLocation" x="897" y="1868"/>
+        </scene>
+        <!--Theme Controller-->
+        <scene sceneID="jWB-HN-AYi">
+            <objects>
+                <viewController id="q15-Xq-qRL" customClass="ThemeController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5VQ-mg-cEU">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nW4-Ut-jDO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FM7-87-Pff" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1509" y="1861"/>
+        </scene>
+        <!--About Controller-->
+        <scene sceneID="Hwd-uf-Zi3">
+            <objects>
+                <viewController id="eir-oA-cEg" customClass="AboutController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XEl-fg-bWM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="O10-v9-0fi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">本项目是网站沉思·航（http://www.chensihang.com）的移动客户端，主要包含的功能如下：
+
+1. 链接为http://www.chensihang.com/blog的整个博客系统的iOS端原生呈现，呈现方式采用调用Wordpress的API产生的JSON，通过解析、重拍版后获得。
+
+2.链接为http://www.chensihang.com/aboutMe的个人主页系统重拍版，利用JSON实现，暂时不具备移动端编辑功能。
+
+3. 链接为http://www.chensihang.com/jwc的四川大学教务处查分系统
+
+4. 个人信息管理与偏好设置
+
+项目版本：v0.0.1</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ksY-Ya-Jb9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EdN-Hj-AYu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1610.5" y="1132.5"/>
         </scene>
         <!--Score Controller-->
         <scene sceneID="6Sg-mc-qXa">

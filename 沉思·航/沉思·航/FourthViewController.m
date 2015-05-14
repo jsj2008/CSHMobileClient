@@ -55,7 +55,6 @@ NSIndexPath *idxpth;
 {
     UITableViewCell *firstcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     firstcell.textLabel.text = @"个人信息";
-    NSLog(@"~~%f~~", firstcell.frame.size.height);
     firstcell.imageView.image = [UIImage imageNamed:@"comments.png"];
     UITableViewCell *secondcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
     secondcell.textLabel.text = @"用户偏好设置";
@@ -94,7 +93,14 @@ NSIndexPath *idxpth;
     }else{
         [tableView deselectRowAtIndexPath:[tableView indexPathForSelectedRow] animated:YES];
     }
-    [self performSegueWithIdentifier:@"info" sender:self.view];
+    if (indexPath.row == 0) {
+        [self performSegueWithIdentifier:@"info" sender:self.view];
+    }
+    else if (indexPath.row == 1) {
+        [self performSegueWithIdentifier:@"theme" sender:self.view];
+    }
+    else
+        [self performSegueWithIdentifier:@"about" sender:self.view];
 }
 
 - (void)didReceiveMemoryWarning {

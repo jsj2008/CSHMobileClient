@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		771139A71B04CF2E008EAE1C /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771139A61B04CF2E008EAE1C /* AboutController.m */; };
+		771139AA1B04DE59008EAE1C /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771139A91B04DE59008EAE1C /* PreferenceController.m */; };
+		771139AD1B04DE9C008EAE1C /* ThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771139AC1B04DE9C008EAE1C /* ThemeController.m */; };
 		7716218F1B02EFE500996152 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7716218E1B02EFE500996152 /* back.png */; };
 		7735797D1ABC442E000153D2 /* ZuSimpelColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7735797C1ABC442E000153D2 /* ZuSimpelColor.m */; };
 		773BE9581AACAB3D00930F47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 773BE9571AACAB3D00930F47 /* main.m */; };
@@ -69,7 +72,6 @@
 		77B4928A1AAEE3100009E0C0 /* FindBackPassword.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B492891AAEE3100009E0C0 /* FindBackPassword.m */; };
 		77B4928D1AAEEE080009E0C0 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B4928C1AAEEE080009E0C0 /* ThirdViewController.m */; };
 		77B492901AAEEE140009E0C0 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77B4928F1AAEEE140009E0C0 /* FourthViewController.m */; };
-		77E1811E1AAF46800059BE82 /* InfoDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 77E1811D1AAF46800059BE82 /* InfoDetails.m */; };
 		77FAD6D51AEF0D9300FDA2CC /* user.png in Resources */ = {isa = PBXBuildFile; fileRef = 77FAD6D41AEF0D9300FDA2CC /* user.png */; };
 		77FAD6D71AEF0E0F00FDA2CC /* key.png in Resources */ = {isa = PBXBuildFile; fileRef = 77FAD6D61AEF0E0F00FDA2CC /* key.png */; };
 		77FAD6D91AEF0F6F00FDA2CC /* mail.png in Resources */ = {isa = PBXBuildFile; fileRef = 77FAD6D81AEF0F6F00FDA2CC /* mail.png */; };
@@ -87,6 +89,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		771139A51B04CF2E008EAE1C /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
+		771139A61B04CF2E008EAE1C /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
+		771139A81B04DE59008EAE1C /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
+		771139A91B04DE59008EAE1C /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
+		771139AB1B04DE9C008EAE1C /* ThemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeController.h; sourceTree = "<group>"; };
+		771139AC1B04DE9C008EAE1C /* ThemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeController.m; sourceTree = "<group>"; };
 		7716218E1B02EFE500996152 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		7735797B1ABC442E000153D2 /* ZuSimpelColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZuSimpelColor.h; sourceTree = "<group>"; };
 		7735797C1ABC442E000153D2 /* ZuSimpelColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZuSimpelColor.m; sourceTree = "<group>"; };
@@ -196,8 +204,6 @@
 		77B4928C1AAEEE080009E0C0 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
 		77B4928E1AAEEE140009E0C0 /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
 		77B4928F1AAEEE140009E0C0 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
-		77E1811C1AAF46800059BE82 /* InfoDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoDetails.h; sourceTree = "<group>"; };
-		77E1811D1AAF46800059BE82 /* InfoDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoDetails.m; sourceTree = "<group>"; };
 		77FAD6D41AEF0D9300FDA2CC /* user.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user.png; sourceTree = "<group>"; };
 		77FAD6D61AEF0E0F00FDA2CC /* key.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = key.png; sourceTree = "<group>"; };
 		77FAD6D81AEF0F6F00FDA2CC /* mail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mail.png; sourceTree = "<group>"; };
@@ -426,8 +432,6 @@
 			children = (
 				7735797B1ABC442E000153D2 /* ZuSimpelColor.h */,
 				7735797C1ABC442E000153D2 /* ZuSimpelColor.m */,
-				77E1811C1AAF46800059BE82 /* InfoDetails.h */,
-				77E1811D1AAF46800059BE82 /* InfoDetails.m */,
 				778AD68F1AAE05E200398C37 /* LoginController.h */,
 				778AD6901AAE05E200398C37 /* LoginController.m */,
 				778AD68C1AAE05D900398C37 /* RegisterController.h */,
@@ -490,6 +494,12 @@
 			children = (
 				773BE9551AACAB3D00930F47 /* Supporting Files */,
 				773BE9621AACAB3D00930F47 /* Main.storyboard */,
+				771139AB1B04DE9C008EAE1C /* ThemeController.h */,
+				771139AC1B04DE9C008EAE1C /* ThemeController.m */,
+				771139A81B04DE59008EAE1C /* PreferenceController.h */,
+				771139A91B04DE59008EAE1C /* PreferenceController.m */,
+				771139A51B04CF2E008EAE1C /* AboutController.h */,
+				771139A61B04CF2E008EAE1C /* AboutController.m */,
 				773BE9651AACAB3E00930F47 /* Images.xcassets */,
 				773BE9671AACAB3E00930F47 /* LaunchScreen.xib */,
 			);
@@ -624,9 +634,11 @@
 				778AD6AC1AAE065C00398C37 /* AFURLConnectionOperation.m in Sources */,
 				7784F53E1B0241F900ED262C /* ASFTableViewPrivateGlobals.m in Sources */,
 				7784F5481B024B9500ED262C /* ScoreController.m in Sources */,
+				771139AD1B04DE9C008EAE1C /* ThemeController.m in Sources */,
 				778AD6911AAE05E200398C37 /* LoginController.m in Sources */,
 				773BE9611AACAB3D00930F47 /* SecondViewController.m in Sources */,
 				77414C701B0032AD0068FEB9 /* YALNavigationBar.m in Sources */,
+				771139A71B04CF2E008EAE1C /* AboutController.m in Sources */,
 				7784F53D1B0241F900ED262C /* ASFTableViewCell.m in Sources */,
 				7735797D1ABC442E000153D2 /* ZuSimpelColor.m in Sources */,
 				773BE95B1AACAB3D00930F47 /* AppDelegate.m in Sources */,
@@ -639,7 +651,6 @@
 				77414C6F1B0032AD0068FEB9 /* YALContextMenuTableView.m in Sources */,
 				77414C5E1B0032AD0068FEB9 /* ContextMenuCell.m in Sources */,
 				77B4928D1AAEEE080009E0C0 /* ThirdViewController.m in Sources */,
-				77E1811E1AAF46800059BE82 /* InfoDetails.m in Sources */,
 				77414C381B0032670068FEB9 /* CBStoreHouseRefreshControl.m in Sources */,
 				778AD6AF1AAE065C00398C37 /* AFURLSessionManager.m in Sources */,
 				77414C651B0032AD0068FEB9 /* HTMLParser.m in Sources */,
@@ -651,6 +662,7 @@
 				778AD6A91AAE065C00398C37 /* AFHTTPSessionManager.m in Sources */,
 				77414C681B0032AD0068FEB9 /* JWBlurView.m in Sources */,
 				77B492901AAEEE140009E0C0 /* FourthViewController.m in Sources */,
+				771139AA1B04DE59008EAE1C /* PreferenceController.m in Sources */,
 				77414C671B0032AD0068FEB9 /* JHWeiboFrame.m in Sources */,
 				7784F53F1B0241F900ED262C /* ASFTableViewPublicGlobals.m in Sources */,
 				77414C6E1B0032AD0068FEB9 /* UIView+YALConstraints.m in Sources */,
