@@ -118,7 +118,7 @@
 {
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     if ([ud valueForKey:@"user"]) {
-        return NO;
+        return YES;
     }
     else
         return NO;

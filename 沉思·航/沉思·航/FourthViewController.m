@@ -42,10 +42,10 @@ NSIndexPath *idxpth;
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (indexPath.row == 0) {
-        return 100;
+        return 80;
     }
     else {
-        return 40;
+        return 55;
     }
 }
 
@@ -55,7 +55,6 @@ NSIndexPath *idxpth;
 {
     UITableViewCell *firstcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     firstcell.textLabel.text = @"个人信息";
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     NSLog(@"~~%f~~", firstcell.frame.size.height);
     firstcell.imageView.image = [UIImage imageNamed:@"comments.png"];
     UITableViewCell *secondcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
