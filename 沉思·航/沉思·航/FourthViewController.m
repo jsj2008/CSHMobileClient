@@ -31,6 +31,7 @@ NSIndexPath *idxpth;
     // self.navigationController.navigati
     [self.view addSubview:toolbar];
     table = [[UITableView alloc] initWithFrame:CGRectMake(0, y * 0.096, x, y * 0.904) style:UITableViewStylePlain];
+    table.tableFooterView = [UIView new]; //去掉多余的行显示
     table.delegate = self;
     table.dataSource = self;
     [self.view addSubview:table];
@@ -38,28 +39,70 @@ NSIndexPath *idxpth;
 }
 
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0) {
+        return 100;
+    }
+    else {
+        return 40;
+    }
+}
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString* cellId = @"cellId";
-    UITableViewCell* cell = [tableView
-                             dequeueReusableCellWithIdentifier:cellId];
-    if(cell == nil)
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-    NSUInteger rowNo = indexPath.row;
-    cell.textLabel.text = [content objectAtIndex:rowNo];
-    cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
-    cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:0.19 green:0.52 blue:0.92 alpha:1];
-    cell.textLabel.highlightedTextColor = [UIColor whiteColor];
-    //将来加入缩略图显示
-    return cell;
+//    static NSString* cellId = @"cellId";
+//    UITableViewCell* cell = [tableView
+//                             dequeueReusableCellWithIdentifier:cellId];
+//
+//    NSUInteger rowNo = indexPath.row;
+//    if(cell == nil) {
+//        if (rowNo != 0)
+//            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+//        else {
+//            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellId];
+//        }
+//    }
+//    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, cell.frame.size.height, cell.frame.size.height)];
+//    [imgView setImage:[UIImage imageNamed:@"back.png"]];
+//    if (rowNo == 0) {
+//        [cell.contentView addSubview:imgView];
+//    }
+//    cell.textLabel.text = [content objectAtIndex:rowNo];
+//    cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
+//    cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:0.19 green:0.52 blue:0.92 alpha:1];
+//    cell.textLabel.highlightedTextColor = [UIColor whiteColor];
+//    
+//    //将来加入缩略图显示
+//    return cell;
+    UITableViewCell *firstcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+    firstcell.textLabel.text = @"个人信息";
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    NSLog(@"~~%f~~", firstcell.frame.size.height);
+    imgView.image = [UIImage imageNamed:@"comments.png"];
+    [firstcell.contentView addSubview:imgView];
+    UITableViewCell *secondcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+    secondcell.textLabel.text = @"用户偏好设置";
+    UITableViewCell *thirdcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+    thirdcell.textLabel.text = @"关于";
+    switch (indexPath.row) {
+        case 0:
+            return firstcell;
+        case 1:
+            return secondcell;
+        case 2:
+            return thirdcell;
+    }
+    return nil;
 }
 // 该方法的返回值决定指定分区内包含多少个表格行。
 - (NSInteger)tableView:(UITableView*)tableView
 	numberOfRowsInSection:(NSInteger)section
 {
     // 由于该表格只有一个分区，直接返回books中集合元素个数代表表格的行数
-    return content.count;
+    return 3;
 }
 
 - (BOOL) tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
