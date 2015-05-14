@@ -53,36 +53,11 @@ NSIndexPath *idxpth;
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    static NSString* cellId = @"cellId";
-//    UITableViewCell* cell = [tableView
-//                             dequeueReusableCellWithIdentifier:cellId];
-//
-//    NSUInteger rowNo = indexPath.row;
-//    if(cell == nil) {
-//        if (rowNo != 0)
-//            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
-//        else {
-//            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:cellId];
-//        }
-//    }
-//    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, cell.frame.size.height, cell.frame.size.height)];
-//    [imgView setImage:[UIImage imageNamed:@"back.png"]];
-//    if (rowNo == 0) {
-//        [cell.contentView addSubview:imgView];
-//    }
-//    cell.textLabel.text = [content objectAtIndex:rowNo];
-//    cell.selectedBackgroundView = [[UIView alloc] initWithFrame:cell.frame];
-//    cell.selectedBackgroundView.backgroundColor = [UIColor colorWithRed:0.19 green:0.52 blue:0.92 alpha:1];
-//    cell.textLabel.highlightedTextColor = [UIColor whiteColor];
-//    
-//    //将来加入缩略图显示
-//    return cell;
-    UITableViewCell *firstcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+    UITableViewCell *firstcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     firstcell.textLabel.text = @"个人信息";
     UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
     NSLog(@"~~%f~~", firstcell.frame.size.height);
-    imgView.image = [UIImage imageNamed:@"comments.png"];
-    [firstcell.contentView addSubview:imgView];
+    firstcell.imageView.image = [UIImage imageNamed:@"comments.png"];
     UITableViewCell *secondcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
     secondcell.textLabel.text = @"用户偏好设置";
     UITableViewCell *thirdcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
