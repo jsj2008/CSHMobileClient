@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface SecondViewController : UIViewController
+- (IBAction)click:(id)sender;
 
 
 

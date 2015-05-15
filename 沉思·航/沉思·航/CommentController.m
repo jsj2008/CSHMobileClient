@@ -23,6 +23,7 @@
     //[self.view addSubview:scrollview];
     scrollview.contentSize = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height);
     NSArray *cary = _cmt;
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     NSLog(@"%@", cary);
     CGRect rect  = [[UIApplication sharedApplication] statusBarFrame];
     UIFont *topfont = [UIFont fontWithName:@"SentyTEA-Platinum" size:15];
@@ -54,7 +55,7 @@
             CGSize textSize =  [self sizeWithString:content.text font:textfont maxSize:CGSizeMake(w - padding * 2, MAXFLOAT)];
             content.frame = CGRectMake(padding, CGRectGetMaxY(username.frame) + padding, textSize.width, textSize.height);
             line.frame = CGRectMake(padding, CGRectGetMaxY(content.frame) + padding, w - padding * 2, 1);
-            line.backgroundColor = darkorange;
+            line.backgroundColor = [NSKeyedUnarchiver unarchiveObjectWithData:[ud valueForKey:@"scheme"]];
             username.font = topfont;
             time.font = topfont;
             content.font = textfont;

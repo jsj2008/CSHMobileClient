@@ -11,8 +11,6 @@
 @implementation FourthViewController
 
 NSDictionary *dic;
-NSArray *content;
-//将来将使用解析新闻链接的方式获得标题
 
 UIToolbar *toolbar;
 UITableView *table;
@@ -21,21 +19,26 @@ NSIndexPath *idxpth;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:YES];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSLog(@"%@", [ud valueForKey:@"user"]);
     // Do any additional setup after loading the view, typically from a nib.
     float x = self.view.frame.size.width;
     float y = self.view.frame.size.height;
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
-    self.navigationController.navigationBar.barTintColor = darkorange;
+    self.navigationController.navigationBar.barTintColor = [NSKeyedUnarchiver unarchiveObjectWithData:[ud valueForKey:@"scheme"]];
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
-    // self.navigationController.navigati
     [self.view addSubview:toolbar];
     table = [[UITableView alloc] initWithFrame:CGRectMake(0, y * 0.096, x, y * 0.904) style:UITableViewStylePlain];
     table.tableFooterView = [UIView new]; //去掉多余的行显示
     table.delegate = self;
     table.dataSource = self;
     [self.view addSubview:table];
-    content = @[@"用户名", @"用户信息"];
 }
 
 

@@ -94,13 +94,13 @@ NSString *postid;
     // Make the background clickable
     
     textview = [[UITextView alloc] initWithFrame:CGRectMake(8, 8, 255, 160)];
-    
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     UIButton * dismissButton = [[UIButton alloc] initWithFrame:CGRectMake(30, 170, 50, 30)];
     UIButton * confirmButton = [[UIButton alloc] initWithFrame:CGRectMake(180, 170, 50, 30)];
     [confirmButton setTitle:@"确定" forState:UIControlStateNormal];
     [dismissButton setTitle:@"取消" forState:UIControlStateNormal];
-    [dismissButton setTitleColor:darkorange forState:UIControlStateNormal];
-    [confirmButton setTitleColor:darkorange forState:UIControlStateNormal];
+    [dismissButton setTitleColor:[NSKeyedUnarchiver unarchiveObjectWithData:[ud valueForKey:@"scheme"]] forState:UIControlStateNormal];
+    [confirmButton setTitleColor:[NSKeyedUnarchiver unarchiveObjectWithData:[ud valueForKey:@"scheme"]] forState:UIControlStateNormal];
     [popUpView addSubview:textview];
     [popUpView addSubview:dismissButton];
     [popUpView addSubview:confirmButton];
