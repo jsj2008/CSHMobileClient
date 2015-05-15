@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "IZValueSelectorView.h"
 
-@interface ThemeController : UIViewController
+@interface ThemeController : UIViewController <IZValueSelectorViewDataSource, IZValueSelectorViewDelegate>
+@property (weak, nonatomic) IBOutlet IZValueSelectorView *selectorVertical;
+
 @property (nonatomic, strong) id indexpath;
 @end

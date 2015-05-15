@@ -10,6 +10,8 @@
 		771139A71B04CF2E008EAE1C /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771139A61B04CF2E008EAE1C /* AboutController.m */; };
 		771139AA1B04DE59008EAE1C /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771139A91B04DE59008EAE1C /* PreferenceController.m */; };
 		771139AD1B04DE9C008EAE1C /* ThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771139AC1B04DE9C008EAE1C /* ThemeController.m */; };
+		771139B01B062E26008EAE1C /* IZValueSelectorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 771139AF1B062E26008EAE1C /* IZValueSelectorView.m */; };
+		771139B21B06310E008EAE1C /* arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 771139B11B06310E008EAE1C /* arrow.png */; };
 		7716218F1B02EFE500996152 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 7716218E1B02EFE500996152 /* back.png */; };
 		7735797D1ABC442E000153D2 /* ZuSimpelColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7735797C1ABC442E000153D2 /* ZuSimpelColor.m */; };
 		773BE9581AACAB3D00930F47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 773BE9571AACAB3D00930F47 /* main.m */; };
@@ -95,6 +97,9 @@
 		771139A91B04DE59008EAE1C /* PreferenceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferenceController.m; sourceTree = "<group>"; };
 		771139AB1B04DE9C008EAE1C /* ThemeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemeController.h; sourceTree = "<group>"; };
 		771139AC1B04DE9C008EAE1C /* ThemeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemeController.m; sourceTree = "<group>"; };
+		771139AE1B062E26008EAE1C /* IZValueSelectorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IZValueSelectorView.h; sourceTree = "<group>"; };
+		771139AF1B062E26008EAE1C /* IZValueSelectorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IZValueSelectorView.m; sourceTree = "<group>"; };
+		771139B11B06310E008EAE1C /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		7716218E1B02EFE500996152 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
 		7735797B1ABC442E000153D2 /* ZuSimpelColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZuSimpelColor.h; sourceTree = "<group>"; };
 		7735797C1ABC442E000153D2 /* ZuSimpelColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZuSimpelColor.m; sourceTree = "<group>"; };
@@ -267,6 +272,7 @@
 		773BE9551AACAB3D00930F47 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				771139B11B06310E008EAE1C /* arrow.png */,
 				7716218E1B02EFE500996152 /* back.png */,
 				77414C711B003D040068FEB9 /* close.png */,
 				77414C3B1B0032AD0068FEB9 /* comments.png */,
@@ -460,6 +466,8 @@
 		779EB33A1AB8004600E3CC16 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				771139AE1B062E26008EAE1C /* IZValueSelectorView.h */,
+				771139AF1B062E26008EAE1C /* IZValueSelectorView.m */,
 				7784F5311B0241F900ED262C /* ASFLabel.h */,
 				7784F5321B0241F900ED262C /* ASFLabel.m */,
 				7784F5331B0241F900ED262C /* ASFTableView.h */,
@@ -587,6 +595,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				778AD6C31AAE072700398C37 /* recommend.png in Resources */,
+				771139B21B06310E008EAE1C /* arrow.png in Resources */,
 				778AD6C11AAE072700398C37 /* news.png in Resources */,
 				77FAD6DB1AEF107400FDA2CC /* lock.png in Resources */,
 				773BE9641AACAB3D00930F47 /* Main.storyboard in Resources */,
@@ -663,6 +672,7 @@
 				77414C681B0032AD0068FEB9 /* JWBlurView.m in Sources */,
 				77B492901AAEEE140009E0C0 /* FourthViewController.m in Sources */,
 				771139AA1B04DE59008EAE1C /* PreferenceController.m in Sources */,
+				771139B01B062E26008EAE1C /* IZValueSelectorView.m in Sources */,
 				77414C671B0032AD0068FEB9 /* JHWeiboFrame.m in Sources */,
 				7784F53F1B0241F900ED262C /* ASFTableViewPublicGlobals.m in Sources */,
 				77414C6E1B0032AD0068FEB9 /* UIView+YALConstraints.m in Sources */,

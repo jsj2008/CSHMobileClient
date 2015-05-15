@@ -90,15 +90,30 @@
             <objects>
                 <viewController id="q15-Xq-qRL" customClass="ThemeController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5VQ-mg-cEU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="MZM-Q5-PHr" customClass="IZValueSelectorView">
+                                <rect key="frame" x="104" y="29" width="168" height="609"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="0.99997437000274658" blue="0.99999129772186279" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.png" id="Fx0-y7-mnp">
+                                <rect key="frame" x="285" y="306" width="48" height="55"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="nW4-Ut-jDO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="selectorVertical" destination="MZM-Q5-PHr" id="F1s-Vq-DnB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FM7-87-Pff" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1509" y="1861"/>
+            <point key="canvasLocation" x="1508.5" y="1860.5"/>
         </scene>
         <!--About Controller-->
         <scene sceneID="Hwd-uf-Zi3">
@@ -539,6 +554,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.png" width="640" height="320"/>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
