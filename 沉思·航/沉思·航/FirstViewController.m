@@ -13,6 +13,7 @@
 #import "HTMLParser.h"
 #import "CBStoreHouseRefreshControl.h"
 #import "ZuSimpelColor.h"
+#import "AFHTTPRequestOperation.h"
 
 @interface FirstViewController ()
 
@@ -33,8 +34,31 @@ NSMutableArray *ids;
     [super viewDidLoad];
 }
 
+- (void)getUserPortraitAsync
+{
+    NSLog(@"trying to download the image");
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    NSString *user = [ud valueForKey:@"user"];
+    NSString *url = [NSString stringWithFormat:@"http://www.chensihang.com/CSHiOS/portraits/%@.jpg", user];
+    NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
+    requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
+    [requestOperation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"Response: %@", responseObject);
+        NSData *portraitData = [NSKeyedArchiver archivedDataWithRootObject:responseObject];
+        [ud setValue:portraitData forKey:@"portrait"];
+        NSLog(@"portrait load");
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Image error: %@", error);
+    }];
+    [requestOperation start];
+}
+
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:YES];
+    [self getUserPortraitAsync];
     self.title = @"沉思·航";
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;

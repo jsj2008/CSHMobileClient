@@ -58,7 +58,8 @@ NSIndexPath *idxpth;
 {
     UITableViewCell *firstcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     firstcell.textLabel.text = @"个人信息";
-    firstcell.imageView.image = [UIImage imageNamed:@"comments.png"];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    firstcell.imageView.image = [NSKeyedUnarchiver unarchiveObjectWithData:[ud valueForKey:@"portrait"]];
     UITableViewCell *secondcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
     secondcell.textLabel.text = @"用户偏好设置";
     UITableViewCell *thirdcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];

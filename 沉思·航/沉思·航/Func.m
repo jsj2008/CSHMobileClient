@@ -14,7 +14,7 @@
 @implementation Func
 
 
-+ (NSString *)webRequestWith:(NSString *)url and:(NSString*)postInfo
++ (id)webRequestWith:(NSString *)url and:(NSString*)postInfo
 {
     NSString *myRequestString = [NSString stringWithString:postInfo];
     
