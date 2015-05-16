@@ -4,6 +4,7 @@
 #import "AppDelegate.h"
 #import "ZuSimpelColor.h"
 #import "LoginController.h"
+#import "Func.h"
 
 @interface FourthViewController ()
 
@@ -62,7 +63,11 @@ NSIndexPath *idxpth;
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     firstcell.imageView.image = [NSKeyedUnarchiver unarchiveObjectWithData:[ud valueForKey:@"portrait"]];
     firstcell.imageView.tag = indexPath.row;
-    UITapGestureRecognizer *tap = [[UIGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    tap.cancelsTouchesInView = YES;
+    tap.delegate = self;
+    [tap setNumberOfTapsRequired:1];
+    [tap setNumberOfTouchesRequired:1];
     [firstcell.imageView addGestureRecognizer:tap];
     firstcell.imageView.userInteractionEnabled = YES;
     UITableViewCell *secondcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
@@ -86,7 +91,7 @@ NSIndexPath *idxpth;
 
 - (void)handleTap:(UITapGestureRecognizer *)recongnizer
 {
-    NSLog(@"Hello, world");
+    [Func showAlert:@"You have tapped on the portrait!!!"];
 }
 
 // 该方法的返回值决定指定分区内包含多少个表格行。

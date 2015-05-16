@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FourthViewController : UINavigationController
+@interface FourthViewController : UINavigationController <UIGestureRecognizerDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @end
