@@ -61,6 +61,10 @@ NSIndexPath *idxpth;
     firstcell.textLabel.text = @"个人信息";
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     firstcell.imageView.image = [NSKeyedUnarchiver unarchiveObjectWithData:[ud valueForKey:@"portrait"]];
+    firstcell.imageView.tag = indexPath.row;
+    UITapGestureRecognizer *tap = [[UIGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
+    [firstcell.imageView addGestureRecognizer:tap];
+    firstcell.imageView.userInteractionEnabled = YES;
     UITableViewCell *secondcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
     secondcell.textLabel.text = @"用户偏好设置";
     UITableViewCell *thirdcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
@@ -79,6 +83,12 @@ NSIndexPath *idxpth;
     }
     return nil;
 }
+
+- (void)handleTap:(UITapGestureRecognizer *)recongnizer
+{
+    NSLog(@"Hello, world");
+}
+
 // 该方法的返回值决定指定分区内包含多少个表格行。
 - (NSInteger)tableView:(UITableView*)tableView
 	numberOfRowsInSection:(NSInteger)section
@@ -114,6 +124,7 @@ NSIndexPath *idxpth;
         [self performSegueWithIdentifier:@"backlogin" sender:self.view];
         NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
         [ud removeObjectForKey:@"user"];
+        [ud removeObjectForKey:@"portrait"];
     }
 }
 

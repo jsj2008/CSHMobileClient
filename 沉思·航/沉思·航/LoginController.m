@@ -27,18 +27,20 @@
 @synthesize idoremail;
 @synthesize passwd;
 
-
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-}
+//
+//- (void)viewDidLoad
+//{
+//    [super viewDidLoad];
+//}
 
 
 - (void)viewDidAppear:(BOOL)animated
 {
     if (self.isValidUser) {
-        [super viewDidAppear:NO];
-        sleep(3);
+        NSLog(@"There is a user in the view");
+        UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        view.backgroundColor = whitesmoke;
+        [self.view addSubview:view];
         [self performSegueWithIdentifier:@"tabbar" sender:self];
     }
     else{
