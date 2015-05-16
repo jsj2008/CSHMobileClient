@@ -3,6 +3,7 @@
 #import "FourthViewController.h"
 #import "AppDelegate.h"
 #import "ZuSimpelColor.h"
+#import "LoginController.h"
 
 @interface FourthViewController ()
 
@@ -64,6 +65,8 @@ NSIndexPath *idxpth;
     secondcell.textLabel.text = @"用户偏好设置";
     UITableViewCell *thirdcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
     thirdcell.textLabel.text = @"关于";
+    UITableViewCell *fourthcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:nil];
+    fourthcell.textLabel.text = @"退出当前账户";
     switch (indexPath.row) {
         case 0:
             return firstcell;
@@ -71,6 +74,8 @@ NSIndexPath *idxpth;
             return secondcell;
         case 2:
             return thirdcell;
+        case 3:
+            return fourthcell;
     }
     return nil;
 }
@@ -79,7 +84,7 @@ NSIndexPath *idxpth;
 	numberOfRowsInSection:(NSInteger)section
 {
     // 由于该表格只有一个分区，直接返回books中集合元素个数代表表格的行数
-    return 3;
+    return 4;
 }
 
 - (BOOL) tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
@@ -103,8 +108,13 @@ NSIndexPath *idxpth;
     else if (indexPath.row == 1) {
         [self performSegueWithIdentifier:@"theme" sender:self.view];
     }
-    else
+    else if (indexPath.row == 2)
         [self performSegueWithIdentifier:@"about" sender:self.view];
+    else {
+        [self performSegueWithIdentifier:@"backlogin" sender:self.view];
+        NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+        [ud removeObjectForKey:@"user"];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -115,7 +125,10 @@ NSIndexPath *idxpth;
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     id destController = segue.destinationViewController;
-    [destController setValue:idxpth forKey:@"indexpath"];
+    BOOL isLogin = [destController isKindOfClass:LoginController.class];
+    if (!isLogin) {
+        [destController setValue:idxpth forKey:@"indexpath"];
+    }
 }
 
 @end

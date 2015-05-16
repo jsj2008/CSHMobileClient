@@ -25,11 +25,4 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-- (IBAction)click:(id)sender {
-    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    NSData *tintColor = [NSKeyedArchiver archivedDataWithRootObject:maroon];
-    [ud setValue:tintColor forKey:@"scheme"];
-    NSLog(@"%@", [NSKeyedUnarchiver unarchiveObjectWithData:[ud valueForKey:@"scheme"]]);
-}
 @end

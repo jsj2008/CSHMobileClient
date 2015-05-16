@@ -4,33 +4,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <scenes>
-        <!--代码分享-->
-        <scene sceneID="wg7-f3-ORb">
-            <objects>
-                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="I9u-qw-St7">
-                                <rect key="frame" x="164" y="217" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="click:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="wZS-yC-hUH"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="代码分享" image="second" id="cPa-gy-q4n"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-163.5" y="472.5"/>
-        </scene>
         <!--用户-->
         <scene sceneID="Ihw-UK-EOI">
             <objects>
@@ -53,7 +26,7 @@
             <objects>
                 <viewController id="hhk-YJ-IVq" customClass="FourthViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fXA-yw-cQz">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -64,11 +37,12 @@
                         <segue destination="eir-oA-cEg" kind="push" identifier="about" id="HI9-k8-LVg"/>
                         <segue destination="11c-AJ-p7w" kind="push" identifier="info" id="YYN-14-zTy"/>
                         <segue destination="q15-Xq-qRL" kind="push" identifier="theme" id="F2b-N0-88P"/>
+                        <segue destination="qTS-AG-2uN" kind="modal" identifier="backlogin" modalTransitionStyle="crossDissolve" id="czr-ey-kYf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlF-nO-sGS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1182.5" y="1073.5"/>
+            <point key="canvasLocation" x="786.5" y="971.5"/>
         </scene>
         <!--Preference Controller-->
         <scene sceneID="QeQ-vH-QPi">
@@ -210,11 +184,11 @@
             <objects>
                 <viewController id="eir-oA-cEg" customClass="AboutController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XEl-fg-bWM">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="O10-v9-0fi">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">本项目是网站沉思·航（http://www.chensihang.com）的移动客户端，主要包含的功能如下：
@@ -245,7 +219,7 @@
             <objects>
                 <viewController id="qWh-pa-E4V" customClass="ScoreController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5M8-oz-lFn">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -255,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GAV-3K-X3i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="230.5" y="747.5"/>
+            <point key="canvasLocation" x="39" y="806"/>
         </scene>
         <!--沉思·航-->
         <scene sceneID="2ey-ut-Ex2">
@@ -394,7 +368,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r4Z-Sd-AQR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-326.5" y="-420.5"/>
+            <point key="canvasLocation" x="-283.5" y="-77.5"/>
         </scene>
         <!--Find Back Password-->
         <scene sceneID="Xh8-s3-1Fu">
@@ -545,7 +519,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="xrg-Yu-u7l" kind="relationship" relationship="viewControllers" id="N4D-la-mEw"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="tNh-iH-m0k" kind="relationship" relationship="viewControllers" id="knP-HA-aT2"/>
                         <segue destination="F5q-E8-3uD" kind="relationship" relationship="viewControllers" id="ouu-Rh-0tr"/>
                     </connections>
@@ -559,7 +532,7 @@
             <objects>
                 <viewController id="cH6-10-Gzu" customClass="DetailController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mgc-Jv-dDF">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -577,7 +550,7 @@
             <objects>
                 <viewController id="79Z-2X-uOx" customClass="CommentController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xaq-fX-DKX">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -625,7 +598,7 @@
             <objects>
                 <tableViewController id="gKM-Lo-Oim" customClass="FirstViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4XT-Hm-Z5u">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <connections>
@@ -646,7 +619,6 @@
     <resources>
         <image name="arrow.png" width="640" height="320"/>
         <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -654,7 +626,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="YpR-qs-Bfu"/>
-        <segue reference="W90-ih-8GO"/>
+        <segue reference="miB-FK-IY0"/>
+        <segue reference="czr-ey-kYf"/>
     </inferredMetricsTieBreakers>
 </document>

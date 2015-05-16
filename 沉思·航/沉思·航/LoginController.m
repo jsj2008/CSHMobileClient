@@ -31,9 +31,15 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    if ([self isValidUser]) {
-        self.view = [[UIView alloc] init];
-        self.view.backgroundColor = [UIColor whiteColor];
+}
+
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    if (self.isValidUser) {
+        [super viewDidAppear:NO];
+        sleep(3);
+        [self performSegueWithIdentifier:@"tabbar" sender:self];
     }
     else{
         [passwd addTarget:self action:@selector(textFieldDidChange:) forControlEvents:UIControlEventAllTouchEvents];
@@ -61,15 +67,6 @@
                                                       1.0f)];
         topBorder.backgroundColor = doubi;
         [passwd addSubview:topBorder];
-    }
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    if (self.isValidUser) {
-        [super viewDidAppear:NO];
-        sleep(3);
-        [self performSegueWithIdentifier:@"tabbar" sender:self];
     }
 }
 

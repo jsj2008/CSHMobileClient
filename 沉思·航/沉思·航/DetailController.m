@@ -46,7 +46,7 @@ NSString *postid;
     NSLog(@"%@", postid);
     commentarr = (NSArray*)[self handleComments:comments];
     NSLog(@"%@", commentarr);
-    CGRect webframe = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height - 30);
+    CGRect webframe = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
     UIWebView *webview = [[UIWebView alloc] initWithFrame:webframe];
     [self.view addSubview:webview];
     NSURL *baseURL = [NSURL fileURLWithPath:[[NSBundle mainBundle] bundlePath]];
