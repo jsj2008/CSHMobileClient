@@ -34,7 +34,6 @@ NSIndexPath *idxpth;
 {
     [super viewWillAppear:YES];
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
-    NSLog(@"%@", [ud valueForKey:@"user"]);
     // Do any additional setup after loading the view, typically from a nib.
     float x = self.view.frame.size.width;
     float y = self.view.frame.size.height;
@@ -68,7 +67,13 @@ NSIndexPath *idxpth;
     firstcell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
     firstcell.textLabel.text = @"个人信息";
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    
     firstcell.imageView.image = [NSKeyedUnarchiver unarchiveObjectWithData:[ud valueForKey:@"portrait"]];
+    firstcell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+    CGFloat widthScale = 65 / firstcell.imageView.image.size.width;
+    CGFloat heightScale = 65 / firstcell.imageView.image.size.height;
+    //this line will do it!
+    firstcell.imageView.transform = CGAffineTransformMakeScale(widthScale, heightScale);
     firstcell.imageView.tag = indexPath.row;
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTap:)];
     tap.cancelsTouchesInView = YES;
@@ -180,6 +185,8 @@ NSIndexPath *idxpth;
 #pragma mark VPImageCropperDelegate
 - (void)imageCropper:(VPImageCropperViewController *)cropperViewController didFinished:(UIImage *)editedImage {
     firstcell.imageView.image = editedImage;
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    [ud setObject:[NSKeyedArchiver archivedDataWithRootObject:editedImage] forKey:@"portrait"];
     [cropperViewController dismissViewControllerAnimated:YES completion:^{
         // TO DO
     }];

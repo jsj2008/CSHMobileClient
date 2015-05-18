@@ -154,6 +154,7 @@
 #pragma mark VPImageCropperDelegate
 - (void)imageCropper:(VPImageCropperViewController *)cropperViewController didFinished:(UIImage *)editedImage {
     self.portraitImageView.image = editedImage;
+    NSLog(@"display a new portrait");
     [cropperViewController dismissViewControllerAnimated:YES completion:^{
         // TO DO
     }];
