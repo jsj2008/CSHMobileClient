@@ -165,7 +165,10 @@ NSIndexPath *idxpth;
 
 
 - (void)uploadPortrait:(NSString *)userid{
-    UIImage *portrait = firstcell.imageView.image;
+    NSLog(@"%@", userid);
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
+    UIImage *portrait = [NSKeyedUnarchiver unarchiveObjectWithData:[ud valueForKey:@"portrait"]];
+    NSLog(@"the image which will be uploaded is %@", portrait);
     NSData *imgdata = UIImageJPEGRepresentation(portrait, 1);
     AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc] init];
     manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
@@ -187,6 +190,7 @@ NSIndexPath *idxpth;
     firstcell.imageView.image = editedImage;
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     [ud setObject:[NSKeyedArchiver archivedDataWithRootObject:editedImage] forKey:@"portrait"];
+    [self uploadPortrait:[ud valueForKey:@"user"]];
     [cropperViewController dismissViewControllerAnimated:YES completion:^{
         // TO DO
     }];
