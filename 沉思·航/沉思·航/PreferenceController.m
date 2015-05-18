@@ -8,6 +8,7 @@
 
 #import "PreferenceController.h"
 #import "Func.h"
+#import "AFHTTPRequestOperationManager.h"
 
 @implementation PreferenceController
 
@@ -47,5 +48,24 @@
     desc.text = json[@"des"];
     weibo.text = json[@"weibo"];
 }
+
+-(void)didMoveToParentViewController:(UIViewController *)parent
+{
+    NSLog(@"back to parent controller");
+    [self saveValueToDB];
+}
+
+- (void)saveValueToDB
+{
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    NSDictionary *params = @{@"id":userid.text, @"tel":tel.text, @"qq":qq.text, @"weibo":weibo.text, @"des":desc.text};
+    [manager POST:@"http://chensihang.com/usermanagement/infoupdate.php" parameters:params success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"JSON: %@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+    }];
+}
+
+
 
 @end
