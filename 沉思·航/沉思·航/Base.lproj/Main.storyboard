@@ -3,6 +3,11 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="SourceHanSansCN-Medium.otf">
+            <string>SourceHanSansCN-Medium</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--用户-->
         <scene sceneID="Ihw-UK-EOI">
@@ -202,7 +207,7 @@
 4. 个人信息管理与偏好设置
 
 项目版本：v0.0.1</mutableString>
-                                <fontDescription key="fontDescription" name="GillSans-SemiBold" family="Gill Sans" pointSize="15"/>
+                                <fontDescription key="fontDescription" name="SourceHanSansCN-Medium" family="Source Han Sans CN" pointSize="15"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences" enablesReturnKeyAutomatically="YES"/>
                             </textView>
                         </subviews>

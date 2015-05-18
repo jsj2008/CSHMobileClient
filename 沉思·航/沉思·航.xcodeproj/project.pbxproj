@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7702AE681B0A0D7100860687 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 7702AE671B0A0D7100860687 /* style.css */; };
+		7702AE6C1B0A14C800860687 /* SourceHanSansCN-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7702AE6A1B0A14A600860687 /* SourceHanSansCN-Medium.otf */; };
 		771139A71B04CF2E008EAE1C /* AboutController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771139A61B04CF2E008EAE1C /* AboutController.m */; };
 		771139AA1B04DE59008EAE1C /* PreferenceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771139A91B04DE59008EAE1C /* PreferenceController.m */; };
 		771139AD1B04DE9C008EAE1C /* ThemeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 771139AC1B04DE9C008EAE1C /* ThemeController.m */; };
@@ -30,7 +32,6 @@
 		77414C5E1B0032AD0068FEB9 /* ContextMenuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 77414C3D1B0032AD0068FEB9 /* ContextMenuCell.m */; };
 		77414C5F1B0032AD0068FEB9 /* ContextMenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 77414C3E1B0032AD0068FEB9 /* ContextMenuCell.xib */; };
 		77414C601B0032AD0068FEB9 /* csh.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77414C3F1B0032AD0068FEB9 /* csh.plist */; };
-		77414C611B0032AD0068FEB9 /* DejaVuSansMono.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77414C401B0032AD0068FEB9 /* DejaVuSansMono.ttf */; };
 		77414C621B0032AD0068FEB9 /* DetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77414C421B0032AD0068FEB9 /* DetailController.m */; };
 		77414C631B0032AD0068FEB9 /* DetailController+ENPopUp.m in Sources */ = {isa = PBXBuildFile; fileRef = 77414C441B0032AD0068FEB9 /* DetailController+ENPopUp.m */; };
 		77414C641B0032AD0068FEB9 /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 77414C461B0032AD0068FEB9 /* HTMLNode.m */; };
@@ -40,14 +41,12 @@
 		77414C681B0032AD0068FEB9 /* JWBlurView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77414C4E1B0032AD0068FEB9 /* JWBlurView.m */; };
 		77414C691B0032AD0068FEB9 /* newc.png in Resources */ = {isa = PBXBuildFile; fileRef = 77414C4F1B0032AD0068FEB9 /* newc.png */; };
 		77414C6A1B0032AD0068FEB9 /* NJWeibo.m in Sources */ = {isa = PBXBuildFile; fileRef = 77414C511B0032AD0068FEB9 /* NJWeibo.m */; };
-		77414C6B1B0032AD0068FEB9 /* Senty.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 77414C521B0032AD0068FEB9 /* Senty.ttf */; };
 		77414C6C1B0032AD0068FEB9 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 77414C531B0032AD0068FEB9 /* share.png */; };
 		77414C6E1B0032AD0068FEB9 /* UIView+YALConstraints.m in Sources */ = {isa = PBXBuildFile; fileRef = 77414C561B0032AD0068FEB9 /* UIView+YALConstraints.m */; };
 		77414C6F1B0032AD0068FEB9 /* YALContextMenuTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 77414C591B0032AD0068FEB9 /* YALContextMenuTableView.m */; };
 		77414C701B0032AD0068FEB9 /* YALNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 77414C5B1B0032AD0068FEB9 /* YALNavigationBar.m */; };
 		77414C721B003D040068FEB9 /* close.png in Resources */ = {isa = PBXBuildFile; fileRef = 77414C711B003D040068FEB9 /* close.png */; };
 		774E56781B0730BB004DF919 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 774E56771B0730BB004DF919 /* icon.png */; };
-		774E567A1B07336A004DF919 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 774E56791B07336A004DF919 /* style.css */; };
 		7784F53B1B0241F900ED262C /* ASFLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F5321B0241F900ED262C /* ASFLabel.m */; };
 		7784F53C1B0241F900ED262C /* ASFTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F5341B0241F900ED262C /* ASFTableView.m */; };
 		7784F53D1B0241F900ED262C /* ASFTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7784F5361B0241F900ED262C /* ASFTableViewCell.m */; };
@@ -91,6 +90,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7702AE671B0A0D7100860687 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		7702AE6A1B0A14A600860687 /* SourceHanSansCN-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceHanSansCN-Medium.otf"; sourceTree = "<group>"; };
 		771139A51B04CF2E008EAE1C /* AboutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutController.h; sourceTree = "<group>"; };
 		771139A61B04CF2E008EAE1C /* AboutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutController.m; sourceTree = "<group>"; };
 		771139A81B04DE59008EAE1C /* PreferenceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferenceController.h; sourceTree = "<group>"; };
@@ -130,7 +131,6 @@
 		77414C3D1B0032AD0068FEB9 /* ContextMenuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextMenuCell.m; sourceTree = "<group>"; };
 		77414C3E1B0032AD0068FEB9 /* ContextMenuCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ContextMenuCell.xib; sourceTree = "<group>"; };
 		77414C3F1B0032AD0068FEB9 /* csh.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = csh.plist; sourceTree = "<group>"; };
-		77414C401B0032AD0068FEB9 /* DejaVuSansMono.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DejaVuSansMono.ttf; sourceTree = "<group>"; };
 		77414C411B0032AD0068FEB9 /* DetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailController.h; sourceTree = "<group>"; };
 		77414C421B0032AD0068FEB9 /* DetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailController.m; sourceTree = "<group>"; };
 		77414C431B0032AD0068FEB9 /* DetailController+ENPopUp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DetailController+ENPopUp.h"; sourceTree = "<group>"; };
@@ -148,7 +148,6 @@
 		77414C4F1B0032AD0068FEB9 /* newc.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = newc.png; sourceTree = "<group>"; };
 		77414C501B0032AD0068FEB9 /* NJWeibo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJWeibo.h; sourceTree = "<group>"; };
 		77414C511B0032AD0068FEB9 /* NJWeibo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJWeibo.m; sourceTree = "<group>"; };
-		77414C521B0032AD0068FEB9 /* Senty.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Senty.ttf; sourceTree = "<group>"; };
 		77414C531B0032AD0068FEB9 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		77414C551B0032AD0068FEB9 /* UIView+YALConstraints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YALConstraints.h"; sourceTree = "<group>"; };
 		77414C561B0032AD0068FEB9 /* UIView+YALConstraints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YALConstraints.m"; sourceTree = "<group>"; };
@@ -159,7 +158,6 @@
 		77414C5B1B0032AD0068FEB9 /* YALNavigationBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YALNavigationBar.m; sourceTree = "<group>"; };
 		77414C711B003D040068FEB9 /* close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = close.png; sourceTree = "<group>"; };
 		774E56771B0730BB004DF919 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		774E56791B07336A004DF919 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		7784F5311B0241F900ED262C /* ASFLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFLabel.h; sourceTree = "<group>"; };
 		7784F5321B0241F900ED262C /* ASFLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFLabel.m; sourceTree = "<group>"; };
 		7784F5331B0241F900ED262C /* ASFTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFTableView.h; sourceTree = "<group>"; };
@@ -311,15 +309,14 @@
 		773BE9551AACAB3D00930F47 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7702AE671B0A0D7100860687 /* style.css */,
+				7702AE6A1B0A14A600860687 /* SourceHanSansCN-Medium.otf */,
 				771139B11B06310E008EAE1C /* arrow.png */,
 				7716218E1B02EFE500996152 /* back.png */,
 				77414C711B003D040068FEB9 /* close.png */,
 				77414C3B1B0032AD0068FEB9 /* comments.png */,
 				77414C3F1B0032AD0068FEB9 /* csh.plist */,
-				77414C401B0032AD0068FEB9 /* DejaVuSansMono.ttf */,
 				77414C4F1B0032AD0068FEB9 /* newc.png */,
-				774E56791B07336A004DF919 /* style.css */,
-				77414C521B0032AD0068FEB9 /* Senty.ttf */,
 				77414C531B0032AD0068FEB9 /* share.png */,
 				77FAD6D81AEF0F6F00FDA2CC /* mail.png */,
 				774E56771B0730BB004DF919 /* icon.png */,
@@ -618,24 +615,23 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7702AE6C1B0A14C800860687 /* SourceHanSansCN-Medium.otf in Resources */,
 				778AD6C31AAE072700398C37 /* recommend.png in Resources */,
 				771139B21B06310E008EAE1C /* arrow.png in Resources */,
 				778AD6C11AAE072700398C37 /* news.png in Resources */,
 				77FAD6DB1AEF107400FDA2CC /* lock.png in Resources */,
 				773BE9641AACAB3D00930F47 /* Main.storyboard in Resources */,
 				77414C691B0032AD0068FEB9 /* newc.png in Resources */,
-				774E567A1B07336A004DF919 /* style.css in Resources */,
+				7702AE681B0A0D7100860687 /* style.css in Resources */,
 				77414C5F1B0032AD0068FEB9 /* ContextMenuCell.xib in Resources */,
 				77414C6C1B0032AD0068FEB9 /* share.png in Resources */,
 				77FAD6D71AEF0E0F00FDA2CC /* key.png in Resources */,
-				77414C6B1B0032AD0068FEB9 /* Senty.ttf in Resources */,
 				7716218F1B02EFE500996152 /* back.png in Resources */,
 				773BE9691AACAB3E00930F47 /* LaunchScreen.xib in Resources */,
 				773BE9661AACAB3E00930F47 /* Images.xcassets in Resources */,
 				774E56781B0730BB004DF919 /* icon.png in Resources */,
 				77414C601B0032AD0068FEB9 /* csh.plist in Resources */,
 				778AD6C41AAE072700398C37 /* testimg.png in Resources */,
-				77414C611B0032AD0068FEB9 /* DejaVuSansMono.ttf in Resources */,
 				77414C5D1B0032AD0068FEB9 /* comments.png in Resources */,
 				77FAD6D51AEF0D9300FDA2CC /* user.png in Resources */,
 				77414C721B003D040068FEB9 /* close.png in Resources */,

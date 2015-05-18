@@ -58,6 +58,10 @@ NSMutableArray *ids;
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
+    for (id familyName in [UIFont familyNames]) {
+        NSLog(@"%@", familyName);
+        for (id fontName in [UIFont fontNamesForFamilyName:familyName]) NSLog(@"  %@", fontName);
+    }
     [self getUserPortraitAsync];
     self.title = @"沉思·航";
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
