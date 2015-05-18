@@ -170,8 +170,8 @@
 		7784F5381B0241F900ED262C /* ASFTableViewPrivateGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFTableViewPrivateGlobals.m; sourceTree = "<group>"; };
 		7784F5391B0241F900ED262C /* ASFTableViewPublicGlobals.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASFTableViewPublicGlobals.h; sourceTree = "<group>"; };
 		7784F53A1B0241F900ED262C /* ASFTableViewPublicGlobals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASFTableViewPublicGlobals.m; sourceTree = "<group>"; };
-		7784F5461B024B9500ED262C /* ScoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScoreController.h; path = "沉思·航/ScoreController.h"; sourceTree = "<group>"; };
-		7784F5471B024B9500ED262C /* ScoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScoreController.m; path = "沉思·航/ScoreController.m"; sourceTree = "<group>"; };
+		7784F5461B024B9500ED262C /* ScoreController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreController.h; sourceTree = "<group>"; };
+		7784F5471B024B9500ED262C /* ScoreController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreController.m; sourceTree = "<group>"; };
 		778AD6891AAE05B900398C37 /* Func.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Func.h; sourceTree = "<group>"; };
 		778AD68A1AAE05B900398C37 /* Func.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Func.m; sourceTree = "<group>"; };
 		778AD68C1AAE05D900398C37 /* RegisterController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterController.h; sourceTree = "<group>"; };
@@ -234,11 +234,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		773BE9491AACAB3D00930F47 = {
+		7702AE641B09874300860687 /* Selector */ = {
+			isa = PBXGroup;
+			children = (
+				771139AE1B062E26008EAE1C /* IZValueSelectorView.h */,
+				771139AF1B062E26008EAE1C /* IZValueSelectorView.m */,
+			);
+			name = Selector;
+			sourceTree = "<group>";
+		};
+		7702AE651B09874D00860687 /* TableViewWithRowsAndColumns */ = {
+			isa = PBXGroup;
+			children = (
+				7784F5311B0241F900ED262C /* ASFLabel.h */,
+				7784F5321B0241F900ED262C /* ASFLabel.m */,
+				7784F5331B0241F900ED262C /* ASFTableView.h */,
+				7784F5341B0241F900ED262C /* ASFTableView.m */,
+				7784F5351B0241F900ED262C /* ASFTableViewCell.h */,
+				7784F5361B0241F900ED262C /* ASFTableViewCell.m */,
+				7784F5371B0241F900ED262C /* ASFTableViewPrivateGlobals.h */,
+				7784F5381B0241F900ED262C /* ASFTableViewPrivateGlobals.m */,
+				7784F5391B0241F900ED262C /* ASFTableViewPublicGlobals.h */,
+				7784F53A1B0241F900ED262C /* ASFTableViewPublicGlobals.m */,
+			);
+			name = TableViewWithRowsAndColumns;
+			sourceTree = "<group>";
+		};
+		7702AE661B09878100860687 /* UserManage */ = {
 			isa = PBXGroup;
 			children = (
 				7784F5461B024B9500ED262C /* ScoreController.h */,
 				7784F5471B024B9500ED262C /* ScoreController.m */,
+				771139AB1B04DE9C008EAE1C /* ThemeController.h */,
+				771139AC1B04DE9C008EAE1C /* ThemeController.m */,
+				771139A81B04DE59008EAE1C /* PreferenceController.h */,
+				771139A91B04DE59008EAE1C /* PreferenceController.m */,
+				771139A51B04CF2E008EAE1C /* AboutController.h */,
+				771139A61B04CF2E008EAE1C /* AboutController.m */,
+			);
+			name = UserManage;
+			sourceTree = "<group>";
+		};
+		773BE9491AACAB3D00930F47 = {
+			isa = PBXGroup;
+			children = (
 				77414C311B002F870068FEB9 /* libxml2.dylib */,
 				773BE9541AACAB3D00930F47 /* 沉思·航 */,
 				773BE9711AACAB3E00930F47 /* 沉思·航Tests */,
@@ -466,18 +505,9 @@
 		779EB33A1AB8004600E3CC16 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				771139AE1B062E26008EAE1C /* IZValueSelectorView.h */,
-				771139AF1B062E26008EAE1C /* IZValueSelectorView.m */,
-				7784F5311B0241F900ED262C /* ASFLabel.h */,
-				7784F5321B0241F900ED262C /* ASFLabel.m */,
-				7784F5331B0241F900ED262C /* ASFTableView.h */,
-				7784F5341B0241F900ED262C /* ASFTableView.m */,
-				7784F5351B0241F900ED262C /* ASFTableViewCell.h */,
-				7784F5361B0241F900ED262C /* ASFTableViewCell.m */,
-				7784F5371B0241F900ED262C /* ASFTableViewPrivateGlobals.h */,
-				7784F5381B0241F900ED262C /* ASFTableViewPrivateGlobals.m */,
-				7784F5391B0241F900ED262C /* ASFTableViewPublicGlobals.h */,
-				7784F53A1B0241F900ED262C /* ASFTableViewPublicGlobals.m */,
+				7702AE661B09878100860687 /* UserManage */,
+				7702AE641B09874300860687 /* Selector */,
+				7702AE651B09874D00860687 /* TableViewWithRowsAndColumns */,
 				77414C741B00430C0068FEB9 /* Refresh */,
 				77414C781B00438A0068FEB9 /* BlogViewController */,
 				77414C761B0043430068FEB9 /* Comments */,
@@ -502,12 +532,6 @@
 			children = (
 				773BE9551AACAB3D00930F47 /* Supporting Files */,
 				773BE9621AACAB3D00930F47 /* Main.storyboard */,
-				771139AB1B04DE9C008EAE1C /* ThemeController.h */,
-				771139AC1B04DE9C008EAE1C /* ThemeController.m */,
-				771139A81B04DE59008EAE1C /* PreferenceController.h */,
-				771139A91B04DE59008EAE1C /* PreferenceController.m */,
-				771139A51B04CF2E008EAE1C /* AboutController.h */,
-				771139A61B04CF2E008EAE1C /* AboutController.m */,
 				773BE9651AACAB3E00930F47 /* Images.xcassets */,
 				773BE9671AACAB3E00930F47 /* LaunchScreen.xib */,
 			);
