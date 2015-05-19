@@ -30,8 +30,9 @@ NSMutableArray *comments;
 NSMutableArray *ids;
 
 
-- (void)viewWillLoad {
+- (void)viewDidLoad {
     [super viewDidLoad];
+        self.storeHouseRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.tableView target:self refreshAction:@selector(refreshTriggered:) plist:@"csh" color:maroon lineWidth:1.5 dropHeight:80 scale:1 horizontalRandomness:150 reverseLoadingAnimation:YES internalAnimationFactor:0.5];
 }
 
 - (void)getUserPortraitAsync
@@ -57,12 +58,17 @@ NSMutableArray *ids;
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:YES];
-    for (id familyName in [UIFont familyNames]) {
-        NSLog(@"%@", familyName);
-        for (id fontName in [UIFont fontNamesForFamilyName:familyName]) NSLog(@"  %@", fontName);
-    }
+    [super viewWillAppear:NO];
     [self getUserPortraitAsync];
+    for (NSString* family in [UIFont familyNames])
+    {
+        NSLog(@"%@", family);
+        
+        for (NSString* name in [UIFont fontNamesForFamilyName: family])
+        {
+            NSLog(@"  %@", name);
+        }
+    }
     self.title = @"沉思·航";
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
@@ -71,10 +77,7 @@ NSMutableArray *ids;
     self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName : [UIColor whiteColor]};
     
     self.tableView.backgroundColor = white;
-    
-    
-    // Let the show begins
-    self.storeHouseRefreshControl = [CBStoreHouseRefreshControl attachToScrollView:self.tableView target:self refreshAction:@selector(refreshTriggered:) plist:@"csh" color:[NSKeyedUnarchiver unarchiveObjectWithData:[ud valueForKey:@"scheme"]] lineWidth:1.5 dropHeight:80 scale:1 horizontalRandomness:150 reverseLoadingAnimation:YES internalAnimationFactor:0.5];
+
 }
 
 #pragma mark - 数据源

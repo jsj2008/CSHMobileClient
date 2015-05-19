@@ -105,15 +105,30 @@
     if (![password isEqualToString:passwordcomfirm]) {
         [Func showAlert:@"输入的确认密码同原密码不同，请重新输入"];
     }
-    NSString *url = @"http://www.chensihang.com/CSHiOS/register.php";
-    NSString *poststr = [NSString stringWithFormat:@"id=%@&email=%@&password=%@", userid, email,  password];
-    NSString *res = [Func webRequestWith:url and:poststr];
-    if ([res isEqualToString:@"success"]) {
-        [self uploadPortrait:userid]; //先上传头像文件
-        [self performSegueWithIdentifier:@"regbar" sender:self];
+    else if (![self judge:email] || ![self judge:userid]) {
+        [Func showAlert:@"输入非法字符，请重新输入"];
     }
-    else [Func showAlert:res];
+    else {
+        NSString *url = @"http://www.chensihang.com/CSHiOS/register.php";
+        NSString *poststr = [NSString stringWithFormat:@"id=%@&email=%@&password=%@", userid, email,  password];
+        NSString *res = [Func webRequestWith:url and:poststr];
+        if ([res isEqualToString:@"success"]) {
+            [self uploadPortrait:userid]; //先上传头像文件
+            [self performSegueWithIdentifier:@"regbar" sender:self];
+        }
+        else [Func showAlert:res];
+    }
 }
+
+-(BOOL)judge:(NSString*)input
+{
+    if ([input containsString:@" "] || [input containsString:@"-"] || [input containsString:@"<"] || [input containsString:@">"] || [input containsString:@"'"] || [input containsString:@"&"]) {
+        NSLog(@"Hello");
+        return NO;
+    }
+    return YES;
+}
+
 
 - (void)uploadPortrait:(NSString *)userid{
     UIImage *portrait = _portraitImageView.image;

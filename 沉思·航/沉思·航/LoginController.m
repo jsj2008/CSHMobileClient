@@ -127,21 +127,34 @@
 {
     NSString *user = idoremail.text;
     NSString *password = passwd.text;
-    NSString *url = @"http://www.chensihang.com/CSHiOS/login.php";
-    NSString *poststr = [NSString stringWithFormat:@"idoremail=%@&password=%@", user, password];
-    NSString *res = [Func webRequestWith:url and:poststr];
-    NSLog(@"%@", res);
-    if ([res isEqualToString:@"success"]) {
-        NSLog(@"Login successfully");
-        NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-        [userDefaults setObject:user forKey:@"user"];
-        [userDefaults setObject:password forKey:@"password"];
-        //[userDefaults synchronize];
-        [self performSegueWithIdentifier:@"tabbar" sender:self];
+    if ([self judge:user] && [self judge:password]) { // 判断用户是否输入非法字符，已达到过滤的目的
+        NSString *url = @"http://www.chensihang.com/CSHiOS/login.php";
+        NSString *poststr = [NSString stringWithFormat:@"idoremail=%@&password=%@", user, password];
+        NSString *res = [Func webRequestWith:url and:poststr];
+        NSLog(@"%@", res);
+        if ([res isEqualToString:@"success"]) {
+            NSLog(@"Login successfully");
+            NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+            [userDefaults setObject:user forKey:@"user"];
+            [userDefaults setObject:password forKey:@"password"];
+            //[userDefaults synchronize];
+            [self performSegueWithIdentifier:@"tabbar" sender:self];
+        }
+        else{
+            [Func showAlert:res];
+        }
+    }else {
+        [Func showAlert:@"您输入了非法字符，请重新输入"];
     }
-    else{
-        [Func showAlert:res];
+}
+
+-(BOOL)judge:(NSString*)input
+{
+    if ([input containsString:@" "] || [input containsString:@"-"] || [input containsString:@"<"] || [input containsString:@">"] || [input containsString:@"'"] || [input containsString:@"&"]) {
+        NSLog(@"Hello");
+        return NO;
     }
+    return YES;
 }
 
 - (IBAction)keyboarddown:(id)sender
@@ -153,7 +166,6 @@
 
 - (IBAction)loginIssue:(id)sender
 {
-    //这个功能未来完成
     NSLog(@"problem login");
 }
 
