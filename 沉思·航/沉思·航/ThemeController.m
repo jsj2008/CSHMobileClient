@@ -28,7 +28,7 @@ NSArray *arr;
     self.selectorVertical.horizontalScrolling = NO;
     
     
-    arr = [NSArray arrayWithObjects:@"茶婊绿", @"脑残粉", @"高端黑", @"国际米蓝", @"发条橙", nil];
+    arr = [NSArray arrayWithObjects:@"GREEN", @"PINK", @"BLACK", @"BLUE", @"ORANGE", nil];
 }
 
 
@@ -65,6 +65,7 @@ NSArray *arr;
 
         label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.selectorVertical.frame.size.width, 70)];
     label.text = arr[index];
+    label.font = [UIFont fontWithName:@"SourceHanSansCN-Medium" size:15];
     label.textAlignment =  NSTextAlignmentCenter;
     label.backgroundColor = [UIColor clearColor];
     if (selected) {
